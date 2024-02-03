@@ -220,8 +220,6 @@ a {
     bottom: 3.5rem;
 }
 
-
-
 .index-about img {
     object-fit: contain;
     width: 50rem;
@@ -360,15 +358,10 @@ a {
     padding: 2rem;
 }
 
-.image-grid a .card-3d {}
-
-.image-grid li img {}
 
 .index-service-card img {
     aspect-ratio: 1/1;
 }
-
-.index-service-card h3 {}
 
 .index-services {
     position: relative;

@@ -1,1 +1,0 @@
-# mamrot.github.io
