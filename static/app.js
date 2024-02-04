@@ -1,3 +1,5 @@
+let carouselAutoInterval;
+
 function contentFade() {
   const maskContainer = document.querySelector(".mask-container");
   const navHeight = document.querySelector("nav").offsetHeight;
@@ -10,15 +12,28 @@ function contentFade() {
       rgba(0, 0, 0 , 1) ${fadeStart + fadeThreshold}px);`;
 }
 
+function toPlainPx(element, style) {
+  if (style.includes("%")) {
+    style = (parseFloat(style) * element.parentElement.offsetWidth) / 100;
+  }
+  if (!parseFloat(style)) {
+    style = 0;
+  }
+  return parseFloat(style);
+}
+
 function infiniteCarousel() {
   const carouselContainers = document.querySelectorAll(".carousel-container");
 
-  carouselContainers.forEach((carouselContainer) => {
+  carouselContainers.forEach((carouselContainer, carouselIndex) => {
     const carousel = carouselContainer.querySelector(".carousel");
     const slides = carousel.querySelectorAll(".carousel-object");
     const totalSlides = slides.length;
-    const slideWidth = slides[0].offsetWidth + (2 * Number(getComputedStyle(carousel).getPropertyValue('gap').replace(/[^0-9]/g, '')));
-
+    const slideWidth =
+      slides[0].offsetWidth +
+      toPlainPx(slides[0], getComputedStyle(slides[0]).marginLeft);
+    let gapWidth = toPlainPx(slides[0], getComputedStyle(carousel).gap);
+    const totalWidth = slideWidth + gapWidth;
     let timer = false;
     let currentIndex = 0;
     let prevIndex;
@@ -30,7 +45,7 @@ function infiniteCarousel() {
       prevIndex = currentIndex;
       currentIndex = (currentIndex + 1) % totalSlides;
 
-      carousel.style.transform = `translateX(-${slideWidth}px)`;
+      carousel.style.transform = `translateX(-${totalWidth}px)`;
       carousel.classList.add("carousel-transition");
       timer = true;
       setTimeout(() => {
@@ -62,11 +77,10 @@ function infiniteCarousel() {
       }, 490);
     }
 
-
     if (carouselContainer.dataset.buttons) {
       const nextSlide = carouselContainer.querySelector(".btn-next");
       const prevSlide = carouselContainer.querySelector(".btn-prev");
-     
+
       nextSlide.addEventListener("click", () => {
         moveRight();
       });
@@ -75,14 +89,19 @@ function infiniteCarousel() {
         moveLeft();
       });
     }
-
     if (carouselContainer.dataset.auto) {
-            setInterval(moveRight, 2500);
+      if (carouselAutoInterval[carouselIndex] !== undefined) {
+        clearInterval(carouselAutoInterval[carouselIndex]);
+      }
+      carouselAutoInterval[carouselIndex] = setInterval(moveRight, 2500);
     }
   });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  const numCarousel = document.querySelectorAll('.carousel-container').length;
+  carouselAutoInterval = Array(numCarousel);
+
   infiniteCarousel();
   contentFade();
 });
@@ -92,5 +111,6 @@ window.onscroll = function () {
 };
 
 window.onresize = function () {
+  infiniteCarousel();
   contentFade();
 };
