@@ -82,6 +82,11 @@ nav {
 
 a {
     text-decoration: none;
+    color: unset;
+
+}
+
+nav a {
     color: var(--white-text);
 }
 
@@ -137,7 +142,7 @@ a {
 }
 
 .hero-buttons {
-    margin-top: 5rem;
+    margin-top: 0rem;
     font-size: 3rem;
     font-weight: 400;
     z-index: 10;
@@ -382,6 +387,7 @@ a {
 
 .index-service-card img {
     aspect-ratio: 1/1;
+    object-fit: cover;
 }
 
 .index-services {
@@ -429,13 +435,51 @@ a {
     width: 8rem;
 }
 
+.index-contact a {
+    transition: 0.5s;
+}
+
+
+.index-contact a:hover {
+    transform: scale(1.1);
+}
+
 
 #services-hero h1 {
     font-size: 6.4rem;
 }
 
+#services-hero-el {
+    position: absolute;
+    top: 70%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
 .services-category {
     background: linear-gradient(180deg, #220B0B 0%, #772A2A 100%);
+    align-items: center;
+    padding: 10rem 0;
+    position: relative;
+}
+
+.services-category img {
+    object-fit: cover;
+    width: 45rem;
+    height: 45rem;
+    aspect-ratio: 1/1 !important;
+    padding-right: 5rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.services-category div h2 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.service-categories {
+    margin: 0;
 }
 
 .service-categories .services-category .flex .flex-column {
@@ -446,7 +490,10 @@ a {
     flex-direction: row-reverse;    
 }
 
-
+.services-category:nth-child(even) div img {
+    padding-left: 5rem;
+    padding-right: 0;
+}
 
 
 
