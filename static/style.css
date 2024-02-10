@@ -498,15 +498,31 @@ nav a {
 .index-contact {
     margin: 0;
     padding-bottom: 0;
-    color: #000;
+    color: #fff;
     align-items: center;
-    background: var(--tertiary-bg);
+    background: var(--secondary-bg);
     padding: 10rem 0;
+}
+
+.index-contact h3 {
+    font-size: 4rem;
+    font-weight: 500;
+    text-align: center;
 }
 
 .index-contact .tool {
     align-items: center;
 
+}
+
+.index-contact-top {
+    gap: 5rem;
+}
+
+.index-contact-socials {
+    padding: 2rem;
+    gap: 5rem;
+    justify-items: flex-start;
 }
 
 .index-contact .tool * {
