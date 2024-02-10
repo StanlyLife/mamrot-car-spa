@@ -115,7 +115,7 @@ function modalOpener() {
     modalCard.addEventListener('click', () => {
       const image = modalCard.querySelector('img').cloneNode(true);
       const heading = modalCard.querySelector('h3').cloneNode(true);
-      const modalBody = modalCard.querySelector('.modal-main-text').cloneNode(true);
+      const modalBody = modalCard.querySelectorAll('.modal-main-text');
 
       modalContainer.classList.add('active');
       modalWindow.innerHTML = '';
@@ -124,7 +124,11 @@ function modalOpener() {
 
       modalContent.appendChild(image);
       modalContent.appendChild(heading);
-      modalContent.appendChild(modalBody);
+
+      modalBody.forEach((node) => {
+        let currentText = node.cloneNode(true);
+        modalContent.appendChild(currentText);
+      })
 
       modalContent.classList.add('modal-content');
 
