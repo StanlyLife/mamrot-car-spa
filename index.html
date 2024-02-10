@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
     <nav>
         <img class="nav-logo" src="static/images/logo.svg" alt="">
         <div class="nav-links">
@@ -23,6 +24,12 @@
             <a href="contact.html">Kontakt</a>
         </div>
     </nav>
+    <div class="modal">
+        <button id="modal-close">close</button>
+        <div class="modal-inner card-3d">
+        </div>
+
+    </div>
     <img src="static/images/hero.png" alt="" id="hero-image">
     <div id="hero-filter"></div>
     <div class="mask-container">
@@ -52,7 +59,7 @@
             </div>
         </div>
         <section class="index-about">
-        <div class="container">
+            <div class="container">
                 <div class="about-card card-3d flex flex-column">
                     <h2>Om <span class="bold">Meg</span></h2>
                     <p>"De siste årene har jeg vært lidenskapelig opptatt, gjennomført flere kurs og investert mye tid i
@@ -68,9 +75,10 @@
                     <p class="quote-source">-Patrik Mamrot</p>
                     <a href="" class="button">Les mer</a>
                 </div>
-        <img id="index-about-img" src="static/images/index-about.png" alt=""></div>
-        
-</section>
+                <img id="index-about-img" src="static/images/index-about.png" alt="">
+            </div>
+
+        </section>
         <section class="toolbox secondary-bg">
             <div class="container flex">
                 <div class="tool">
@@ -93,18 +101,14 @@
                 <div class="carousel-container" data-buttons="true">
                     <div class="carousel flex carousel-testimonials">
                         <div class="carousel-object card-3d">
-                            <img class="testimonial-profile-pic"
-                                src="static/images/marthe-johnsen.jpg"
-                                alt="">
+                            <img class="testimonial-profile-pic" src="static/images/marthe-johnsen.jpg" alt="">
                             <h3 class="testimonial-profile-name">Marthe Johnsen Wilhelmsen</h3> <img
                                 class="testimonial-rating" src="static/images/5-star.svg" alt="">
                             <p class="testimonial-text">“Kan det han holder på med super service og kjempe bra resultat
                                 Anbefales”</p>
                         </div>
                         <div class="carousel-object card-3d">
-                            <img class="testimonial-profile-pic"
-                                src="static/images/rene-haaheim.jpg"
-                                alt="">
+                            <img class="testimonial-profile-pic" src="static/images/rene-haaheim.jpg" alt="">
                             <h3 class="testimonial-profile-name">Renè Håheim</h3> <img class="testimonial-rating"
                                 src="static/images/5-star.svg" alt="">
                             <p class="testimonial-text">“Vi har brukt Patrik fast på flere jobber gjennom sommeren!<br>
@@ -116,17 +120,13 @@
                                 Anbefaler å ta en prat med Patrik om du trenger noe”</p>
                         </div>
                         <div class="carousel-object card-3d">
-                            <img class="testimonial-profile-pic"
-                                src="static/images/tore-johansen.jpg"
-                                alt="">
+                            <img class="testimonial-profile-pic" src="static/images/tore-johansen.jpg" alt="">
                             <h3 class="testimonial-profile-name">Tore Johansen</h3> <img class="testimonial-rating"
                                 src="static/images/5-star.svg" alt="">
                             <p class="testimonial-text">“Veldig godt fornøyd med resultatet og servicen 🙂👍”</p>
                         </div>
                         <div class="carousel-object card-3d">
-                            <img class="testimonial-profile-pic"
-                                src="static/images/sunniva-ekman.jpg"
-                                alt="">
+                            <img class="testimonial-profile-pic" src="static/images/sunniva-ekman.jpg" alt="">
                             <h3 class="testimonial-profile-name">Sunniva Ekmann</h3> <img class="testimonial-rating"
                                 src="static/images/5-star.svg" alt="">
                             <p class="testimonial-text">“Vil du ha bilen din skinnende ren som når den var ny, så
@@ -136,8 +136,7 @@
                                 hyggelig, effektiv og ikke skremmende priser, så blir brukt igjen 😍”</p>
                         </div>
                         <div class="carousel-object card-3d">
-                            <img class="testimonial-profile-pic"
-src="static/images/kai-ander.jpg"                                alt="">
+                            <img class="testimonial-profile-pic" src="static/images/kai-ander.jpg" alt="">
                             <h3 class="testimonial-profile-name">Kai Anders Lunde </h3> <img class="testimonial-rating"
                                 src="static/images/5-star.svg" alt="">
                             <p class="testimonial-text">“Utrolig dyktig og meget nøye med å få et fantastisk resultat!
@@ -147,9 +146,7 @@ src="static/images/kai-ander.jpg"                                alt="">
                                 Mamrot ProRens på det varmeste.10/10 👍”</p>
                         </div>
                         <div class="carousel-object card-3d">
-                            <img class="testimonial-profile-pic"
-                            src="static/images/trond-erik.jpg"
-                                alt="">
+                            <img class="testimonial-profile-pic" src="static/images/trond-erik.jpg" alt="">
                             <h3 class="testimonial-profile-name">Trond Erik Grådal</h3> <img class="testimonial-rating"
                                 src="static/images/5-star.svg" alt="">
                             <p class="testimonial-text">“Punktlighet med rett pris og meget flott resultat. Anbefales
@@ -173,72 +170,156 @@ src="static/images/kai-ander.jpg"                                alt="">
                 <section class="index-services">
                     <h2>Tjenester</h2>
                     <ul class="image-grid">
-                        <li class="index-service-card card-3d">
+                        <li class="index-service-card card-3d modal-card open">
                             <a class="flex flex-column">
                                 <img src="static/images/color-change.jpg" alt="">
-                                <div>
+                                <div class="index-service-card-content">
                                     <h3>Helfoliering</h3>
-                                    <p>
+                                    <p class="modal-blurb">
                                         Gi bilen din et unikt preg med vårt toppmoderne folieringsalternativ. Velg blant
                                         et bredt spekter av farger og teksturer for å beskytte lakken og gi kjøretøyet
                                         ditt et personlig preg.</p>
+                                    <p class="modal-main-text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam hic quam
+                                        expedita sequi praesentium, enim dignissimos vitae. Quod praesentium voluptate,
+                                        aperiam mollitia optio eveniet voluptates, reprehenderit voluptatum animi atque
+                                        reiciendis!
+                                        Sequi magnam, veritatis nobis sapiente reprehenderit eveniet voluptatibus
+                                        reiciendis magni dignissimos quod accusamus non consequuntur exercitationem fuga
+                                        nulla at impedit iusto dolorum ipsa libero nihil repellendus ex! Rerum, nihil
+                                        sunt.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe molestias
+                                        architecto nobis vero, cupiditate fugiat unde consequatur reprehenderit expedita
+                                        ratione nesciunt, blanditiis, autem corrupti pariatur quia dolor in voluptatibus
+                                        atque!
+                                        Mollitia cupiditate eius est repellendus a voluptates, adipisci maiores veniam
+                                        deserunt nam ducimus nesciunt quaerat quia, ratione error ipsam corporis.
+                                        Possimus, earum cumque. Commodi, fuga possimus? Vel quibusdam fugiat soluta.
+                                        Consequatur nemo, aliquam illo necessitatibus commodi doloremque hic pariatur
+                                        ducimus praesentium nulla ea tenetur, placeat non provident quasi. Illo incidunt
+                                        aliquam placeat provident. Fugit saepe reprehenderit ut cumque est quibusdam.
+                                        Corrupti odio alias, repudiandae iusto fugiat quis accusamus accusantium magnam
+                                        vel laboriosam illum rem quibusdam? Impedit odio sapiente distinctio quisquam
+                                        nesciunt eaque aliquam aspernatur, numquam inventore maxime ea. Perspiciatis,
+                                        doloremque.
+                                        Voluptatem non in nemo praesentium dolore fugiat consequuntur, suscipit ipsam.
+                                        Nobis, numquam. Temporibus voluptatum vitae officia hic maxime placeat sint
+                                        excepturi accusamus. Natus rem vitae animi esse mollitia libero voluptate!
+                                        Ipsam, hic delectus veniam labore explicabo fugit molestias ipsa cum
+                                        repellendus, atque ipsum modi nam deleniti quas, dolor dolores voluptates error
+                                        saepe corrupti ea. Obcaecati reiciendis aut eius et dolore.
+                                        Doloremque culpa dolor quae. Esse, est molestiae a itaque cumque libero
+                                        recusandae, vitae, aperiam consequatur quod earum. Voluptatum, alias quod
+                                        pariatur quos necessitatibus, harum laborum magni, temporibus velit praesentium
+                                        nostrum?
+                                        Id ipsa cumque ea ullam dicta sed dolor exercitationem optio! Maxime amet,
+                                        eaque, eos, ut iure voluptas voluptatum eius blanditiis eligendi tempora modi
+                                        dolorem ipsam voluptate nesciunt culpa rem earum.
+                                        Impedit non repudiandae tenetur iste! Ea, ratione, qui similique reprehenderit,
+                                        pariatur consequuntur repudiandae ab optio harum unde obcaecati nobis. Aut quo
+                                        odio ea voluptatibus aperiam vero blanditiis quis veritatis praesentium!
+                                        Fugiat id saepe hic soluta! Amet reprehenderit vitae suscipit deleniti
+                                        praesentium, saepe tempora magnam. Vel delectus accusantium magnam illo,
+                                        voluptatum molestias explicabo! Ex iusto aspernatur optio voluptates non
+                                        possimus neque?
+                                    </p>
+                                    <div class="link-with-chev">
+                                        <span>Les mer</span><img class="link-chevron"
+                                            src="static/images/chevron-right.svg">
+                                    </div>
                                 </div>
                             </a>
                         </li>
-                        <li class="index-service-card card-3d">
+                        <li class="index-service-card card-3d modal-card">
                             <a class="flex flex-column">
                                 <img src="static/images/ppf.png" alt="">
-                                <div>
+                                <div class="index-service-card-content">
                                     <h3>Lakkbeskyttelse</h3>
-                                    <p>Bevar skjønnheten til din bil med vår nyskapende lakkbeskyttelse. Vi benytter
+                                    <p class="modal-blurb">Bevar skjønnheten til din bil med vår nyskapende
+                                        lakkbeskyttelse. Vi benytter
                                         moderne teknologi for å påføre en usynlig, beskyttende hinne som effektivt
                                         skjermer mot steinsprut, insekter og skadelige UV-stråler.</p>
+                                    <p class="modal-main-text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam hic quam
+                                        expedita sequi praesentium, enim dignissimos vitae. Quod praesentium voluptate,
+                                        aperiam mollitia optio eveniet voluptates, reprehenderit voluptatum animi atque
+                                        reiciendis!
+                                        Sequi magnam, veritatis nobis sapiente reprehenderit eveniet voluptatibus
+                                        reiciendis magni dignissimos quod accusamus non consequuntur exercitationem fuga
+                                        nulla at impedit iusto dolorum ipsa libero nihil repellendus ex! Rerum, nihil
+                                        sunt.
+                                    </p>
+                                    <div class="link-with-chev">
+                                        <span>Les mer</span><img class="link-chevron"
+                                            src="static/images/chevron-right.svg">
+                                    </div>
                                 </div>
+
                             </a>
                         </li>
-                        <li class="index-service-card card-3d">
+                        <li class="index-service-card card-3d modal-card">
                             <a class="flex flex-column">
                                 <img src="static/images/ceramic-coating.jpg" alt="">
-                                <div>
+                                <div class="index-service-card-content">
                                     <h3>Keramisk Lakkforsegling</h3>
-                                    <p>Beskytt investeringen din med vår avanserte keramiske lakkforsegling. Denne
+                                    <p class="modal-blurb">Beskytt investeringen din med vår avanserte keramiske
+                                        lakkforsegling. Denne
                                         langvarige løsningen gir en usynlig barriere mot skitt, forurensninger og
                                         UV-stråler, og gir kjøretøyet ditt en strålende glans.</p>
+                                    <div class="link-with-chev">
+                                        <span>Les mer</span><img class="link-chevron"
+                                            src="static/images/chevron-right.svg">
+                                    </div>
                                 </div>
                             </a>
-                        <li class="index-service-card card-3d">
+                        <li class="index-service-card card-3d modal-card">
                             <a class="flex flex-column">
                                 <img src="static/images/polishing.png" alt="">
-                                <div>
+                                <div class="index-service-card-content">
                                     <h3>Polering</h3>
-                                    <p>Gjenoppliv glansen til din kjøretøyets overflate med vår profesjonelle
+                                    <p class="modal-blurb">Gjenoppliv glansen til din kjøretøyets overflate med vår
+                                        profesjonelle
                                         poleringstjeneste. Fjern riper, oksidasjon og ujevnheter, og oppnå en speilblank
                                         finish som får bilen din til å skinne som ny.</p>
+                                    <div class="link-with-chev">
+                                        <span>Les mer</span><img class="link-chevron"
+                                            src="static/images/chevron-right.svg">
+                                    </div>
                                 </div>
                             </a>
                         </li>
-                        <li class="index-service-card card-3d">
+                        <li class="index-service-card card-3d modal-card">
                             <a class="flex flex-column">
                                 <img src="static/images/lorry-protection.png" alt="">
-                                <div>
+                                <div class="index-service-card-content">
                                     <h3>Lastebil Behandling</h3>
-                                    <p>Forsterk lastebilens lakk med vår avanserte keramiske lakkforsegling. Motstå
+                                    <p class="modal-blurb">Forsterk lastebilens lakk med vår avanserte keramiske
+                                        lakkforsegling. Motstå
                                         skitt, veisalt og værpåvirkning mens du opprettholder en strålende og
                                         reflekterende overflate.</p>
+                                    <div class="link-with-chev">
+                                        <span>Les mer</span><img class="link-chevron"
+                                            src="static/images/chevron-right.svg">
+                                    </div>
                                 </div>
                             </a>
                         </li>
-                        <li class="index-service-card card-3d">
+                        <li class="index-service-card card-3d modal-card">
                             <a class="flex flex-column">
                                 <img src="static/images/chrome-delete.png" alt="">
-                                <div>
+                                <div class="index-service-card-content">
                                     <h3>Chrome Delete</h3>
-                                    <p>Oppgrader kjøretøyets utseende med vår spesialiserte Chrome Delete-tjeneste. Ved
+                                    <p class="modal-blurb">Oppgrader kjøretøyets utseende med vår spesialiserte Chrome
+                                        Delete-tjeneste. Ved
                                         å eliminere det blanke kromet gir vi bilen din et moderne og eksklusivt preg.
                                         Velg blant et utvalg av matte eller blanke finisher for å matche din personlige
                                         stil.
 
                                     </p>
+                                    <div class="link-with-chev">
+                                        <span>Les mer</span><img class="link-chevron"
+                                            src="static/images/chevron-right.svg">
+                                    </div>
                                 </div>
 
                             </a>
@@ -282,7 +363,7 @@ src="static/images/kai-ander.jpg"                                alt="">
                         <h3>Mamrot CarSpa & Detailing</h3>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1393.0003491742075!2d19.13359737821676!3d69.56535115399748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x45c4c501797144d5%3A0xa9acefdafcc44b6d!2sMamrot%20CarSpa%20%26%20Detailing!5e0!3m2!1sen!2sno!4v1706981550291!5m2!1sen!2sno"
-                             style="border:0;" allowfullscreen="" loading="lazy"
+                            style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="toolbox flex flex-column">

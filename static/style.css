@@ -15,6 +15,20 @@
 
 }
 
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5D5A53;
+    border-radius: 1rem;
+}
+
 body {
     font-family: var(--main-font);
     margin: 0;
@@ -30,6 +44,63 @@ body {
 .secondary-bg {
     background: var(--secondary-bg);
     padding: 0.01rem 0;
+}
+
+.modal {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--nav-bg);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+}
+
+.modal .modal-inner {
+    transform: scale(0.7);
+    transition: transform 0.6s;
+}
+
+.modal.active .modal-inner {
+    transform: scale(1);
+}
+
+.modal.active {
+    display: flex;
+    transform: scale(1);
+}
+
+.modal-inner {
+    width: 50vw;
+    height: 90vh;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+}
+
+#modal-close {
+    position: absolute;
+    top: 6vh;
+    right: 26vw;
+    z-index: 100100;
+}
+
+.modal-content {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.modal-content img {
+    width: 100%;
+}
+
+.modal-content p,
+.modal-content h3 {
+    padding: 5rem;
 }
 
 h2 {
@@ -380,14 +451,27 @@ nav a {
     border-radius: 1rem;
 }
 
-.image-grid li a div {
+.index-service-card-content {
     padding: 2rem;
+}
+
+.index-service-card {
+    cursor: pointer;
+    transition: transform 0.6s;
+}
+
+.index-service-card:hover {
+    transform: scale(1.05);
 }
 
 
 .index-service-card img {
     aspect-ratio: 1/1;
     object-fit: cover;
+}
+
+.modal-card .modal-main-text {
+    display: none;
 }
 
 .index-services {
@@ -450,12 +534,12 @@ nav a {
 }
 
 .link-with-chev:hover .link-chevron {
-transform: translateX(1rem);
+    transform: translateX(1rem);
 }
 
 .link-chevron {
-padding-left: 1rem;
-transition: 0.6s;
+    padding-left: 1rem;
+    transition: 0.6s;
 }
 
 #services-hero h1 {
@@ -502,6 +586,7 @@ transition: 0.6s;
 
 .service-category-text {
     max-width: 50%;
+    font-size: 2rem;
 }
 
 .service-categories .services-category .flex .flex-column {
@@ -509,7 +594,7 @@ transition: 0.6s;
 }
 
 .services-category:nth-child(even) div {
-    flex-direction: row-reverse;    
+    flex-direction: row-reverse;
 }
 
 .services-category:nth-child(even) .services-img {
@@ -523,7 +608,7 @@ transition: 0.6s;
     nav {
         padding: 2rem 6rem;
     }
-    
+
     .nav-logo {
         height: 4rem;
     }
@@ -533,11 +618,12 @@ transition: 0.6s;
     }
 
     h2 {
-    font-size: 6rem;
-}
+        font-size: 6rem;
+    }
+
     .container {
-    padding: 0 3rem;
-}
+        padding: 0 3rem;
+    }
 
     .hero-text-lg {
         font-size: 4rem;
@@ -564,9 +650,7 @@ transition: 0.6s;
         font-size: 2.5rem;
     }
 
-    .toolbox div {
-        
-    }
+    .toolbox div {}
 
     .image-grid {
         grid-gap: 3rem;
@@ -585,33 +669,39 @@ transition: 0.6s;
     :root {
         font-size: 40%;
     }
-    
+
+    section {
+        margin: 2rem 0;
+    }
+
+    .container {
+        margin: 0rem 0;
+        padding: 0;
+    }
+
+    .index-services .index-service-card {
+        border-radius: unset;
+    }
+
     h2 {
         font-size: 3rem;
     }
 
-    .hero-text-lg {
-        
+    .hero-text-lg {}
+
+    .toolbox .flex {
+        flex-direction: column;
+
     }
 
-    .container {
-        padding: 0 1rem;
+    .toolbox .tool {
+        padding: 5rem 0;
     }
-.toolbox .flex{
-    flex-direction: column;
 
-}
+    .index-contact-main {}
 
-.toolbox .tool {
-    padding: 5rem 0;
-}
-
-.index-contact-main {
-
-}
-
-.index-contact iframe {
-    width: 300px;
-    height: 300px;
-}
+    .index-contact iframe {
+        width: 300px;
+        height: 300px;
+    }
 }

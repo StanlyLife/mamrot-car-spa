@@ -96,7 +96,43 @@ function infiniteCarousel() {
       carouselAutoInterval[carouselIndex] = setInterval(moveRight, 2500);
     }
   });
-}
+};
+
+function modalOpener() {
+  const body = document.querySelector('body');
+  const modalCards = document.querySelectorAll('.modal-card');
+  const modalContainer = document.querySelector('.modal');
+  const modalWindow = modalContainer.querySelector('.modal-inner');
+  const modalClose = modalContainer.querySelector('#modal-close');
+
+  modalClose.addEventListener('click', () => {
+    modalContainer.classList.remove('active');
+    body.style.overflow = 'auto';
+
+  });
+
+  modalCards.forEach((modalCard) => {
+    modalCard.addEventListener('click', () => {
+      const image = modalCard.querySelector('img').cloneNode(true);
+      const heading = modalCard.querySelector('h3').cloneNode(true);
+      const modalBody = modalCard.querySelector('.modal-main-text').cloneNode(true);
+
+      modalContainer.classList.add('active');
+      modalWindow.innerHTML = '';
+
+      let modalContent = document.createElement('div');
+
+      modalContent.appendChild(image);
+      modalContent.appendChild(heading);
+      modalContent.appendChild(modalBody);
+
+      modalContent.classList.add('modal-content');
+
+      modalWindow.appendChild(modalContent);
+      body.style.overflow = 'hidden';
+    })
+  })
+};
 
 document.addEventListener("DOMContentLoaded", () => {
   const numCarousel = document.querySelectorAll('.carousel-container').length;
@@ -104,6 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   infiniteCarousel();
   contentFade();
+  modalOpener();
 });
 
 window.onscroll = function () {
