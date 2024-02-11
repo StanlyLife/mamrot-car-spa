@@ -64,6 +64,32 @@ body {
     transition: transform 0.6s;
 }
 
+.modal .modal-inner-gallery {
+    max-width: 80vw;
+    max-height: 80vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.modal-inner-gallery #modal-close {
+    top: 3rem;
+    right: 3rem;
+}
+
+.modal-inner-gallery .modal-content {
+
+    max-height: 80vh;
+    max-width: 80vh;
+
+}
+
+.modal-inner-gallery .modal-content img{
+    max-height: 100%;
+    max-width: 100%;
+    object-fit:scale-down
+
+}
+
 .modal.active .modal-inner {
     transform: scale(1);
 }
@@ -88,13 +114,13 @@ body {
     z-index: 100100;
 }
 
-.modal-content {
+.modal-inner .modal-content {
     height: 100%;
     width: 100%;
     overflow-y: auto;
 }
 
-.modal-content img {
+.modal-inner .modal-content img {
     width: 100%;
 }
 

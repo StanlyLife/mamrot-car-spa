@@ -2,8 +2,7 @@ function modalOpener() {
     const body = document.querySelector('body');
     const modalCards = document.querySelectorAll('.modal-card');
     const modalContainer = document.querySelector('.modal');
-    const modalWindow = modalContainer.querySelector('.modal-inner');
-    const modalClose = modalContainer.querySelector('#modal-close');
+    const modalWindow = modalContainer.querySelector('.modal-inner-gallery');
   
     function closeModal() {
       modalContainer.classList.remove('active');
@@ -11,9 +10,14 @@ function modalOpener() {
     }
   
     function openModal(modalCard) {
-      const image = modalCard.querySelector('img').cloneNode(true);
-      const heading = modalCard.querySelector('h3').cloneNode(true);
-      const modalBody = modalCard.querySelectorAll('.modal-main-text');
+      const imageSrc = modalCard.dataset.image;
+      const image = new Image();
+      image.src = `static/images/gallery-high/${imageSrc}.jpg`;
+      const button = document.createElement('button');
+      button.textContent = 'close';
+      button.id = 'modal-close';
+      button.addEventListener('click', closeModal);
+ 
   
       modalContainer.classList.add('active');
       modalWindow.innerHTML = '';
@@ -21,12 +25,8 @@ function modalOpener() {
       let modalContent = document.createElement('div');
   
       modalContent.appendChild(image);
-      modalContent.appendChild(heading);
-  
-      modalBody.forEach((node) => {
-        let currentText = node.cloneNode(true);
-        modalContent.appendChild(currentText);
-      })
+    modalContent.appendChild(button);
+
   
       modalContent.classList.add('modal-content');
   
@@ -35,10 +35,8 @@ function modalOpener() {
     }
   
   
-    modalClose.addEventListener('click', closeModal);
-  
     modalContainer.addEventListener('click', (event) => {
-      if (!event.target.closest('.modal-inner')) {
+      if (!event.target.closest('.modal-inner-gallery')) {
         closeModal();
       }
     })
@@ -49,3 +47,7 @@ function modalOpener() {
       })
     })
   };
+
+  document.addEventListener('DOMContentLoaded', () => {
+    modalOpener();
+  })
