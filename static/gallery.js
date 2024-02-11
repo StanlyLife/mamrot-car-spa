@@ -12,9 +12,9 @@ function modalOpener() {
     function openModal(modalCard) {
       const imageSrc = modalCard.dataset.image;
       const image = new Image();
-      image.src = `static/images/gallery-high/${imageSrc}.jpg`;
+      image.src = `static/images/high_res/${imageSrc}.jpg`;
       const button = document.createElement('button');
-      button.textContent = 'close';
+      button.innerHTML = '<img src="static/images/close-x.svg" alt="">';
       button.id = 'modal-close';
       button.addEventListener('click', closeModal);
  
