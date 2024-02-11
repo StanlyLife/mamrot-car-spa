@@ -1,9 +1,10 @@
 
 function contentFade() {
   const maskContainer = document.querySelector(".mask-container");
-  const navHeight = document.querySelector("nav").offsetHeight;
+  const overNavHeight = document.querySelector(".over-nav").scrollHeight;
+ 
   const fadeThreshold = 0;
-  let fadeStart = navHeight + window.scrollY;
+  let fadeStart = window.scrollY - overNavHeight;
 
   maskContainer.style.cssText = `-webkit-mask:  linear-gradient( to bottom,
       rgba(0, 0, 0 ,0) 0px,
