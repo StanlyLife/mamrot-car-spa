@@ -392,6 +392,8 @@ nav a {
 
 .gallery-bg {
     background: url(/static/images/gallery-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .carousel-container {
