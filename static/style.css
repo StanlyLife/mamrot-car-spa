@@ -21,7 +21,7 @@
 
 ::-webkit-scrollbar-track {
     background: none;
-    border-radius: 1rem;
+    border-radius: 3rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -115,7 +115,7 @@ h2 {
 }
 
 section {
-    margin: 25rem 0;
+    padding: 25rem 0;
 }
 
 nav {
@@ -286,6 +286,7 @@ nav a {
     font-weight: 300;
     font-size: 2rem;
     padding: 0;
+    margin: 25rem 0;
 
 }
 
@@ -335,6 +336,11 @@ nav a {
 .tool {
     text-align: center;
     margin: 0 3rem;
+}
+
+
+#service-image-bg {
+    background: url(/static/images/index-service-background.jpg);
 }
 
 .carousel-container {
@@ -449,6 +455,17 @@ nav a {
     overflow: hidden;
     margin-bottom: 6rem;
     border-radius: 1rem;
+}
+
+.gallery-image {
+    overflow: hidden;
+    aspect-ratio: 1/ 1;
+}
+
+.gallery-image img {
+    object-fit: cover;
+    max-width: 150%;
+    max-height: 100%;
 }
 
 .index-service-card-content {
@@ -570,24 +587,32 @@ nav a {
 }
 
 .services-category {
+    display: flex;
     background: linear-gradient(180deg, #220B0B 0%, #772A2A 100%);
     align-items: center;
-    padding: 10rem 0;
+    padding: 0;
     position: relative;
 }
 
 .services-category .container {
     justify-content: flex-end;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .services-img {
-    position: absolute;
+    position: relative;
     object-fit: cover;
     top: 0;
     left: 0;
     height: 100%;
     width: 45%;
 
+}
+
+#index-lorry-image {
+    object-position: 50% 100%;
 }
 
 .services-category div h2 {
@@ -614,8 +639,8 @@ nav a {
 }
 
 .services-category:nth-child(even) .services-img {
-    right: 0;
-    left: unset;
+    left: 100%;
+    transform: translateX(-100%);
 }
 
 
@@ -671,6 +696,7 @@ nav a {
     .image-grid {
         grid-gap: 3rem;
     }
+    
 
     .index-contact-main {
         margin: 0 auto;
