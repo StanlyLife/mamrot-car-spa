@@ -23,6 +23,7 @@ function toPlainPx(element, style) {
 }
 
 function hamburgerToCross() {
+
   navLinks = document.querySelector('.nav-links');
   overNav = document.querySelector('.over-nav');
   document.querySelector('#hamburger-icon').addEventListener('click', function () {
@@ -39,16 +40,32 @@ function hamburgerToCross() {
   });
 }
 
+function mobileNavTransition() {
+  navLinks = document.querySelector('.nav-links');
+  overNav = document.querySelector('.over-nav');
+  if (window.innerWidth < 769) {
+    setTimeout(() => {
+        navLinks.classList.add('nav-transition');
+        overNav.classList.add('nav-transition');
+    }, 1);
+  
+  } else {
+    navLinks.classList.remove('nav-transition');
+    overNav.classList.remove('nav-transition');
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   contentFade();
   hamburgerToCross();
+  mobileNavTransition();
 });
 
 window.onscroll = function () {
   contentFade();
 };
 
-window.onresize = function () {
-
+window.addEventListener('resize', () => {
+  mobileNavTransition();
   contentFade();
-};
+});
