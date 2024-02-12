@@ -83,11 +83,10 @@ body {
 
 }
 
-.modal-inner-gallery .modal-content img{
+.modal-inner-gallery .modal-content img {
     max-height: 80vh;
     max-width: 80vw;
-    object-fit:scale-down
-
+    object-fit: scale-down
 }
 
 .modal.active .modal-inner {
@@ -149,7 +148,7 @@ h2 {
 }
 
 .over-nav {
-    
+
     box-sizing: border-box;
     display: flex;
     width: 100%;
@@ -521,10 +520,10 @@ nav a {
 }
 
 .gallery-image img {
- position: absolute;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .gallery-image:hover {
@@ -758,7 +757,15 @@ nav a {
     .over-nav {
         padding-left: 5%;
     }
-    
+
+    .modal-inner {
+        width: 80vw;
+    }
+
+    #modal-close {
+        right: 11vw;
+    }
+
     nav {
         padding: 2rem 6rem;
     }
@@ -813,7 +820,7 @@ nav a {
     .image-grid {
         grid-gap: 3rem;
     }
-    
+
 
     .index-contact-main {
         margin: 0 auto;
@@ -827,7 +834,7 @@ nav a {
         align-items: center;
         gap: 10rem;
     }
-    
+
     .map-contact-container {
         flex-direction: column-reverse;
         align-items: center;
@@ -857,8 +864,8 @@ nav a {
     }
 
     .services-category:nth-child(even) .services-img {
-       left: unset;
-       transform: unset; 
+        left: unset;
+        transform: unset;
     }
 
 }
@@ -866,10 +873,207 @@ nav a {
 @media only screen and (max-width: 768px) {
     :root {
         font-size: 40%;
+
+        --hamburger-height: 4rem;
+        --half-hamburger-height: calc(var(--hamburger-height) / 2);
+        --negative-half-hamburger-height: calc(-1 * var(--half-hamburger-height));
+        --hamburger-width: 6rem;
+    }
+
+    .nav-links,
+    .over-nav {
+        width: 0;
+        box-sizing: border-box;
+        font-size: 4rem;
+        position: fixed;
+        justify-content: space-between;
+        padding: 10rem 0;
+        align-items: center;
+        right: 0;
+        background: var(--secondary-bg);
+        overflow: hidden;
+        transition: 0.6s;
+    }
+
+    .nav-links *,
+    .over-nav * {
+        opacity: 0;
+        transform: translateY(-200%);
+
+
+    }
+
+    .nav-links.active *,
+    .over-nav.active * {
+        opacity: 1;
+        transition-delay: 0.7s;
+        transition-duration: 0.7s;
+        transform: none;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        top: 0;
+        height: 65%;
+    }
+
+    .over-nav {
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        gap: 8rem;
+        bottom: 0;
+        height: 35%;
+        z-index: 111111;
+    }
+
+    .nav-links.active,
+    .over-nav.active {
+        width: 50%;
+    }
+
+    #hamburger-icon {
+        display: unset;
+        position: fixed;
+        width: var(--hamburger-width);
+        height: var(--hamburger-height);
+        cursor: pointer;
+        top: 2rem;
+        right: 2rem;
+
+    }
+
+    #hamburger-icon div {
+        background: #FFF;
+        width: 100%;
+        height: 4px;
+        position: absolute;
+        border-radius: 4px;
+        box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.2)
+    }
+
+    #hamburger-icon #line-1 {
+        animation: line-1-rev 0.6s;
+        top: 0;
+    }
+
+    #hamburger-icon #line-2 {
+        animation: line-2-rev 0.6s;
+        top: var(--half-hamburger-height);
+    }
+
+    #hamburger-icon #line-3 {
+        animation: line-3-rev 0.6s;
+        top: var(--hamburger-height);
+    }
+
+    #hamburger-icon.active #line-1 {
+        transform: translate(0, var(--half-hamburger-height)) rotate(45deg);
+        animation: line-1 0.6s;
+    }
+
+    #hamburger-icon.active #line-2 {
+        transform: scale(0);
+        animation: line-2 0.6s;
+    }
+
+    #hamburger-icon.active #line-3 {
+        transform: translate(0, var(--negative-half-hamburger-height)) rotate(135deg);
+        animation: line-3 0.6s;
+    }
+
+    .animation-off {
+        -webkit-animation: none !important;
+        animation: none !important;
+    }
+
+    @keyframes line-1 {
+        from {
+            transform: translate(0, 0);
+        }
+
+        50% {
+            transform: translate(0, var(--half-hamburger-height));
+        }
+
+        to {
+            transform: translate(0, var(--half-hamburger-height)) rotate(45deg);
+        }
+    }
+
+    @keyframes line-2 {
+        from {
+            transform: scale(1);
+        }
+
+        to {
+            transform: scale(0)
+        }
+    }
+
+    @keyframes line-3 {
+        from {
+            transform: translate(0, 0);
+        }
+
+        50% {
+            transform: translate(0, var(--negative-half-hamburger-height));
+        }
+
+        to {
+            transform: translate(0, var(--negative-half-hamburger-height)) rotate(135deg);
+        }
+    }
+
+    @keyframes line-1-rev {
+        from {
+            transform: translate(0, var(--half-hamburger-height)) rotate(45deg);
+        }
+
+        50% {
+            transform: translate(0, var(--half-hamburger-height));
+        }
+
+        to {
+            transform: translate(0, 0px);
+        }
+    }
+
+    @keyframes line-2-rev {
+        from {
+            transform: scale(0);
+        }
+
+        to {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes line-3-rev {
+        from {
+            transform: translate(0, var(--negative-half-hamburger-height)) rotate(135deg);
+        }
+
+        50% {
+            transform: translate(0, var(--negative-half-hamburger-height));
+        }
+
+        to {
+            transform: translate(0, 0px);
+        }
     }
 
     section {
         margin: 2rem 0;
+    }
+
+    .modal-inner {
+        width: 90vw;
+    }
+
+    #modal-close {
+        right: 6vw;
+        height: 7rem;
+        width: 7rem;
     }
 
     .container {

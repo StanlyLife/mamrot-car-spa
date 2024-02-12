@@ -2,7 +2,7 @@
 function contentFade() {
   const maskContainer = document.querySelector(".mask-container");
   const overNavHeight = document.querySelector(".over-nav").scrollHeight;
- 
+
   const fadeThreshold = 0;
   let fadeStart = window.scrollY - overNavHeight;
 
@@ -22,8 +22,26 @@ function toPlainPx(element, style) {
   return parseFloat(style);
 }
 
+function hamburgerToCross() {
+  navLinks = document.querySelector('.nav-links');
+  overNav = document.querySelector('.over-nav');
+  document.querySelector('#hamburger-icon').addEventListener('click', function () {
+    navLinks.querySelectorAll('a').forEach((child) => {
+      child.classList.toggle('transition');
+    })
+
+
+    navLinks.classList.toggle('active');
+    overNav.classList.toggle('active');
+    this.classList.toggle('active');
+    this.querySelectorAll('div').forEach((element) => element.classList.remove('animation-off'));
+
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   contentFade();
+  hamburgerToCross();
 });
 
 window.onscroll = function () {
