@@ -137,6 +137,7 @@ body {
 }
 
 h2 {
+    margin: 0;
     text-align: center;
     font-size: 10rem;
     font-weight: 300;
@@ -327,6 +328,10 @@ nav a {
     width: 50%;
 }
 
+.index-testimonials {
+    padding: 10rem 0;
+}
+
 .index-about {
     box-sizing: border-box;
     width: 100%;
@@ -392,6 +397,7 @@ nav a {
 }
 
 .gallery-bg {
+    padding: 10rem 0;
     background: url(/static/images/gallery-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -400,6 +406,7 @@ nav a {
 .carousel-container {
     overflow: hidden;
     position: relative;
+    padding: 10rem 0;
 }
 
 .carousel {
@@ -490,7 +497,7 @@ nav a {
 }
 
 .image-grid {
-    padding: 0;
+    margin: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 5rem;
@@ -539,6 +546,11 @@ nav a {
     max-width: 150%;
     max-height: 100%;
 }
+
+.index-services .image-grid {
+    padding: 10rem 0;
+}
+
 
 .index-service-card-content {
     padding: 2rem;
@@ -699,8 +711,6 @@ nav a {
     left: 0;
     height: 100%;
     width: 45%;
-
-
 }
 
 #index-lorry-image {
@@ -721,7 +731,7 @@ nav a {
 .service-category-text {
     max-width: 50%;
     font-size: 2rem;
-    padding: 8rem 0;
+    padding: 8rem 2rem;
 }
 
 .service-categories .services-category .flex .flex-column {
@@ -754,6 +764,20 @@ nav a {
 
 .gallery-current-page {
     text-decoration: underline;
+}
+
+.prices-bg {
+    background: url(/static/images/prices-bg.jpg);
+}
+
+.price {
+    justify-content: space-between;
+    font-size: 4rem;
+}
+
+.price-head {
+    margin: 0;
+    padding-top: 25rem;
 }
 
 
@@ -872,6 +896,10 @@ nav a {
         transform: unset;
     }
 
+    .price {
+        font-size: 3rem;
+    }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -904,15 +932,15 @@ nav a {
     }
 
     .nav-links *,
-    .over-nav * {
+    .over-nav > * {
         opacity: 0;
-        transform: translateY(-200%);
+        transform: translateY(-20rem);
 
 
     }
 
     .nav-links.active *,
-    .over-nav.active * {
+    .over-nav.active > * {
         opacity: 1;
         transition-delay: 0.7s;
         transition-duration: 0.7s;
@@ -1114,5 +1142,9 @@ nav a {
     .index-contact iframe {
         width: 300px;
         height: 300px;
+    }
+
+    .price {
+        font-size: 2.5rem;
     }
 }
