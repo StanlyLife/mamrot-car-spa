@@ -65,8 +65,7 @@ body {
 }
 
 .modal .modal-inner-gallery {
-    max-width: 80vw;
-    max-height: 80vh;
+
     overflow: hidden;
     position: relative;
 }
@@ -78,15 +77,14 @@ body {
 
 .modal-inner-gallery .modal-content {
 
-    max-height: 80vh;
-    max-width: 80vh;
+
 
 }
 
 .modal-inner-gallery .modal-content img {
-    max-height: 80vh;
-    max-width: 80vw;
-    object-fit: scale-down
+    max-height: 95vh;
+    max-width: 95vw;
+    object-fit: contain;
 }
 
 .modal.active .modal-inner {
@@ -592,6 +590,10 @@ nav a {
 
 .index-service-card:hover {
     transform: scale(1.05);
+}
+
+.index-service-card a:hover{
+    transform: none;
 }
 
 
