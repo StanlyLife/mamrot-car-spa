@@ -726,6 +726,8 @@ nav a {
     margin: 0;
     position: relative;
     background: url(/static/images/services-bg.jpg);
+    background-repeat: repeat-y;
+    background-size: cover;
 }
 
 .service-category-text {
@@ -766,18 +768,42 @@ nav a {
     text-decoration: underline;
 }
 
+.prices-main hr{
+    height: 0.2rem;
+    background-color: var(--white-text);
+}
+
+.prices-main h3 {
+    text-align: center;
+    font-weight: 400;
+}
+
 .prices-bg {
     background: url(/static/images/prices-bg.jpg);
 }
 
 .price {
     justify-content: space-between;
+    align-items: center;
     font-size: 4rem;
+    border-bottom: 1px solid #cccccc;
 }
 
 .price-head {
     margin: 0;
     padding-top: 25rem;
+}
+
+.price-undertext {
+    font-size: 2.5rem;
+}
+
+.from-to {
+    align-items: flex-end;
+}
+
+.from-to p, .price-cat p{
+    margin: 1.5rem 0;
 }
 
 
@@ -954,12 +980,20 @@ nav a {
     }
 
     .over-nav {
+        font-size: 2rem;
         flex-direction: column-reverse;
         justify-content: flex-start;
         gap: 8rem;
         bottom: 0;
         height: 35%;
         z-index: 111111;
+    }
+
+    .over-nav img {
+        height: 2rem;
+    }
+    .over-nav-socials {
+        gap: 4rem;
     }
 
     .nav-links.active,
@@ -1142,6 +1176,10 @@ nav a {
     .index-contact iframe {
         width: 300px;
         height: 300px;
+    }
+
+    .image-grid {
+        padding: 0;
     }
 
     .price {
