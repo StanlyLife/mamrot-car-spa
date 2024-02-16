@@ -819,7 +819,23 @@ nav a {
     justify-content: space-between;
     align-items: center;
     font-size: 4rem;
-    border-bottom: 1px solid #cccccc;
+    width: 100%;
+    border-collapse:collapse ;
+   
+}
+
+
+
+.price th {
+    text-align: left;    
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid;
+
+}
+
+.price th, .price td {
+    padding: 2rem;
 }
 
 .price-head {
@@ -827,17 +843,15 @@ nav a {
     padding-top: 25rem;
 }
 
-.price-undertext {
-    font-size: 2.5rem;
+.price-asterisk {
+    font-size: 2rem;
 }
 
-.from-to {
-    align-items: flex-end;
+.prices-note {
+    font-size: 2rem;
+    padding-left: 2rem;
 }
 
-.from-to p, .price-cat p{
-    margin: 1.5rem 0;
-}
 
 .contact-container {
     background: radial-gradient(111.1% 90.85% at 50.04% 2.67%, #B32A2A 0%, #350C0C 100%);
@@ -1275,6 +1289,15 @@ nav a {
     }
 
     .price {
-        font-size: 2.5rem;
+        font-size: 2rem;
+    }
+
+    .price-asterisk {
+        font-size: 1rem;
+    }
+    
+    .prices-note {
+        font-size: 1rem;
+        padding-left: 2rem;
     }
 }
