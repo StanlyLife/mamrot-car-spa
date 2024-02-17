@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,400;0,500;0,700;1,300&display=swap"
         rel="stylesheet">
-        <link rel="icon" href="static/images/logo-no-text.svg">
+    <link rel="icon" href="static/images/logo-no-text.svg">
     <script src="static/app.js"></script>
     <script src="static/contact.js"></script>
     <link rel="stylesheet" href="static/style.css">
@@ -47,8 +47,18 @@
         </div>
     </nav>
     <div class="modal">
-        <button id="modal-close"><img src="static/images/close-x.svg" alt=""></button>
-        <div class="modal-inner card-3d">
+        <div class="modal-inner-contact card-3d">
+            <button class="modal-close" id="modal-close"><img src="static/images/close-x.svg" alt=""></button>
+            <div class="modal-content flex flex-column">
+                <div class="email-animation">
+                    <img class="email-animation-main" src="static/images/email-main.svg" alt="">
+                    <img class="email-animation-whizz" src="static/images/email-whizz.svg" alt="">
+                    <img class="email-animation-tick" src="static/images/email-tick.svg" alt="">
+                </div>
+                <p>Din e-post er sendt</p>
+                <hr>
+                <a class="button modal-close">Ferdig</a>
+            </div>
         </div>
 
     </div>
@@ -64,8 +74,9 @@
                 <div class="contact-form-container flex flex-column">
                     <h2>Send en <span class="bold">melding</span></h2>
                     <form class=" contact-form flex flex-column" action="">
-                        <input type="text" name="email" id="email" placeholder="E-post" required>
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Melding" required></textarea>
+                        <input type="email" name="email" id="email" placeholder="E-post" required>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Melding"
+                            required></textarea>
                         <button type="submit" class="button">Send</button>
                     </form>
 

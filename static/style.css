@@ -127,7 +127,12 @@ body {
 
 .modal-inner .modal-content img {
     width: 100%;
+    max-height: 70vh;
+    object-fit: cover;
+
+
 }
+
 
 .modal-content p,
 .modal-content h3 {
@@ -919,8 +924,82 @@ nav a {
     gap: 2rem;
 }
 
+.email-animation {
+    height: 30rem;
+    width: 40rem;
+    position: relative;
+    overflow: hidden;
+}
 
+.modal-inner-contact img {
+    position: absolute;
+}
 
+.email-animation-main {
+    top: 50%;
+    left: 50%;
+    height: 40%;
+    transform: translate(-200%, -50%);
+
+}
+
+.email-animation-tick {
+    top: 55%;
+    left: 62%;
+    height: 30%;
+    transform: scale(0);
+
+}
+
+.email-animation-whizz {
+    right: 73%;
+    top: 30%;
+    float:right;
+    height: 30%;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+
+}
+
+.modal.active .email-animation-main {
+    transform: translate(-50%, -50%);
+    transition-duration: 0.6s;
+}
+
+.modal.active .email-animation-tick, .modal.active .email-animation-whizz {
+    transform: none;    
+    transition-delay: 0.6s;
+    transition-duration: 0.6s;
+}
+
+.modal-inner-contact  {
+    padding: 8rem;
+
+    position: relative;
+}
+
+.modal-inner-contact .modal-content {
+        align-items: center;
+}
+
+.modal-inner-contact #modal-close {
+    right: 2rem;
+    top: 2rem;
+}
+
+.modal-inner-contact .button {
+    align-self: center;
+    margin-top: 4rem;
+}
+
+.modal-inner-contact p {
+    text-align: center;
+    font-size: 4rem;
+}
+
+.modal-inner-contact hr {
+    width: 100%;
+}
 
 
 
@@ -1290,8 +1369,6 @@ nav a {
         padding: 5rem 0;
     }
 
-    .index-contact-main {}
-
     .index-contact iframe {
         width: 300px;
         height: 300px;
@@ -1312,5 +1389,20 @@ nav a {
     .prices-note {
         font-size: 1rem;
         padding-left: 2rem;
+    }
+
+    .services-category {
+        padding: 4rem 0;
+    }
+
+    .service-category-text .button {
+        margin-top: 4rem;
+        align-self: center;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem;
     }
 }

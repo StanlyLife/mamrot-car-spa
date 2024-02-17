@@ -7,48 +7,48 @@ function sendEmail() {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        const message = contactForm.querySelector('#message').value;
-        const userEmail = contactForm.querySelector('#email').value;
+        const message = contactForm.querySelector('#message');
+        const userEmail = contactForm.querySelector('#email');
 
         if (userEmail == '' || message == '') {
             return alert('Email not sent. Please ensure all required fields are filled in.')
         }
 
         fetch(url + '?q=' + JSON.stringify([
-            recipient, `E-Post fra ${userEmail}`, `Epost fra nettsidens Kontakt form.\n${message}\nSendt fra: ${userEmail}`
+            recipient, `E-Post fra ${userEmail.value}`, `Epost fra nettsidens kontakt form.\n\n${message.value}\n\nSendt fra: ${userEmail.value}`
         ])).then(() => {
-            const body = document.querySelector('body');
-            const modalContainer = document.querySelector('.modal');
-            const modalWindow = document.querySelector('.modal-inner');
-            const modalClose = document.querySelector('#modal-close')
+            openModal();
 
-
-            function closeModal() {
-                modalContainer.classList.remove('active');
-                body.style.overflow = 'auto';
-            }
-
-            modalClose.addEventListener('click', closeModal);
-
-            modalContainer.addEventListener('click', (event) => {
-                if (!event.target.closest('.modal-inner')) {
-                  closeModal();
-                }
-              })
-
-            modalContainer.classList.add('active');
-            modalWindow.innerHTML = '';
-
-            let modalContent = document.createElement('div');
-            
-
-
-            modalContent.classList.add('modal-content');
-
-            modalWindow.appendChild(modalContent);
-            body.style.overflow = 'hidden';
+        message.value = '';
+        userEmail.value = '';
         })
     })
+}
+
+function openModal() {
+    const body = document.querySelector('body');
+    const modalContainer = document.querySelector('.modal');
+    const modalWindow = document.querySelector('.modal-inner');
+    const modalClose = document.querySelectorAll('.modal-close')
+
+
+    function closeModal() {
+        modalContainer.classList.remove('active');
+        body.style.overflow = 'auto';
+    }
+    modalClose.forEach((button) => {
+        button.addEventListener('click', closeModal);
+
+    });
+
+    modalContainer.addEventListener('click', (e) => {
+        if (!e.target.closest('.modal-inner-contact')) {
+            closeModal();
+        }
+    })
+
+    modalContainer.classList.add('active');
+    body.style.overflow = 'hidden';
 }
 
 document.addEventListener('DOMContentLoaded', () => {

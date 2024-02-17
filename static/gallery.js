@@ -22,7 +22,7 @@ function modalOpener() {
       modalContainer.classList.add('active');
       modalWindow.innerHTML = '';
   
-      let modalContent = document.createElement('div');
+      const modalContent = document.createElement('div');
   
       modalContent.appendChild(image);
     modalContent.appendChild(button);
@@ -35,8 +35,8 @@ function modalOpener() {
     }
   
   
-    modalContainer.addEventListener('click', (event) => {
-      if (!event.target.closest('.modal-inner-gallery')) {
+    modalContainer.addEventListener('click', (e) => {
+      if (!e.target.closest('.modal-inner-gallery')) {
         closeModal();
       }
     })
