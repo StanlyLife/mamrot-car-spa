@@ -99,12 +99,12 @@ function modalOpener() {
         setTimeout(() => {
           carousel.style.transform = "";
           carousel.classList.add("carousel-transition");
-        }, 10);
+        }, 1);
   
         setTimeout(() => {
           carousel.classList.remove("carousel-transition");
           timer = false;
-        }, 490);
+        }, 500);
       }
   
       if (carouselContainer.dataset.buttons) {
