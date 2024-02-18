@@ -84,6 +84,22 @@ ul {
     max-width: 95vw;
     object-fit: contain;
 }
+.modal .modal-inner-prices {
+
+    overflow: hidden;
+    position: relative;
+}
+
+.modal-inner-prices #modal-close {
+    top: 3rem;
+    right: 3rem;
+}
+
+.modal-inner-prices .modal-content img {
+    max-height: 95vh;
+    max-width: 95vw;
+    object-fit: contain;
+}
 
 .modal.active .modal-inner {
     transform: scale(1);
@@ -254,18 +270,23 @@ nav a {
 }
 
 .hero-sm-container {
+    align-items: center;
     justify-content: center;
     width: 100%;
+    margin: 25rem 0;
 }
 
 .hero-text-sm {
     font-size: 3.8rem;
     font-weight: 400;
-    margin: 25rem 0;
     text-align: left;
     line-height: 6rem;
     max-width: 80%;
+    margin-bottom: 10rem;
+}
 
+.secondary-hero-buttons {
+    display: none;
 }
 
 .hero-buttons {
@@ -905,6 +926,12 @@ nav a {
 }
 
 
+.pricelist-image-button {
+    cursor: pointer;
+    margin-left: auto;
+    align-self: flex-end;
+}
+
 .contact-container {
     background: radial-gradient(111.1% 90.85% at 50.04% 2.67%, #B32A2A 0%, #350C0C 100%);
     padding: 6rem 6rem;
@@ -1198,7 +1225,14 @@ nav a {
         background: var(--secondary-bg);
         overflow: hidden;
         transform: translateX(50%) scale(0, 1);
+    }
 
+    .primary-hero-buttons {
+        display: none;
+    }
+
+    .secondary-hero-buttons {
+        display: block;
     }
 
     .nav-transition {

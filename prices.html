@@ -10,6 +10,7 @@
         rel="stylesheet">
     <link rel="icon" href="static/images/logo-no-text.svg">
     <script src="static/app.js"></script>
+    <script src="static/prices.js"></script>
     <link rel="stylesheet" href="static/style.css">
     <title>Mamrot CarSpa & Detailing</title>
 </head>
@@ -47,7 +48,13 @@
         </div>
     </nav>
 
-    <img src="static/images/prices-hero.jpeg" alt="" id="hero-image">
+    <div class="modal">
+
+        <div class="modal-inner-prices"> <button id="modal-close">close</button>
+        </div>
+    </div>
+
+    <img src="static/images/prices-hero.jpg" alt="" id="hero-image">
 
     <div class="mask-container">
         <section class="hero container flex flex-column">
@@ -143,11 +150,13 @@
                         <th>Pris - Sedan/Stasjsonvogn</th>
                     </tr>
                     <tr>
-                        <td>Full Bil (Gloss)</td>
+                        <td>Full Bil (Gloss) <img data-image="gloss" class="pricelist-image-button"
+                            src="static/images/image-icon.svg" alt=""></td>
                         <td>Fra 45 000,-</td>
                     </tr>
                     <tr>
-                        <td>Full Bil (Matt)</td>
+                        <td>Full Bil (Matt) <img data-image="matte" class="pricelist-image-button"
+                            src="static/images/image-icon.svg" alt=""></td>
                         <td>50 000,-</td>
                     </tr>
                     <tr>
@@ -183,7 +192,13 @@
                         <td>5 000,-</td>
                     </tr>
                     <tr>
-                        <td>STEK PPF DYNOcarbon (Tak, Panser)</td>
+                        <td>STEK PPF DYNOcarbon (tak, panser) <img data-image="carbon" class="pricelist-image-button"
+                                src="static/images/image-icon.svg" alt=""></td>
+                        <td>Etter Avtale</td>
+                    </tr>
+                    <tr>
+                        <td>STEK PPF DYNOdamascus (tak, panser) <img data-image="damascus"
+                                class="pricelist-image-button" src="static/images/image-icon.svg" alt=""></td>
                         <td>Etter Avtale</td>
                     </tr>
                 </table>
@@ -191,9 +206,9 @@
                 <p class="price-note"><span class="price-asterisk">**</span>Panser, front støtfanger, front lykter,
                     forskjermer, kanaler, a-stolpe, speilhus, lastesone.</p>
                 <p class="price-note"><span class="price-asterisk">***</span>Forskjellige farger/stiler tilgjengelig.
-                    Klikk på en farge for bildeeksempel: <a class="underline">DYNOshade</a>, <a
-                        class="underline">DYNOsmoke</a>
-                    , <a class="underline">DYNOyellow, <a class="underline">gloss (gjennomsiktig)</a></a>.
+                    Klikk på en farge for bildeeksempel: <a data-image="shade"
+                        class="underline pricelist-image-button">DYNOshade</a>, <a data-image="smoke" class="underline pricelist-image-button">DYNOsmoke</a>
+                    , <a data-image="yellow" class="underline pricelist-image-button">DYNOyellow</a>, <a data-image="gloss" class="underline pricelist-image-button">gloss (gjennomsiktig)</a>.
                 </p>
 
                 <h2 class="price-head">Fargeendring</h2>
@@ -204,31 +219,43 @@
                         <th>Pris</th>
                     </tr>
                     <tr>
-                        <td>STEK DYNOgreen <span class="price-asterisk">*</span></td>
+                        <td>STEK DYNOgreen <span class="price-asterisk">*</span> <img data-image="green"
+                                class="pricelist-image-button" src="static/images/image-icon.svg" alt=""></td>
                         <td>Fra 60 000,-</td>
                     </tr>
                     <tr>
-                        <td>STEK DYNOred <span class="price-asterisk">*</span></td>
+                        <td>STEK DYNOred <span class="price-asterisk">*</span> <img data-image="red"
+                                class="pricelist-image-button" src="static/images/image-icon.svg" alt=""></td>
                         <td>Fra 60 000,-</td>
                     </tr>
                     <tr>
-                        <td>STEK DYNOblack-gloss <span class="price-asterisk">*</span></td>
+                        <td>STEK DYNOblack-gloss <span class="price-asterisk">*</span> <img data-image="black-gloss"
+                                class="pricelist-image-button" src="static/images/image-icon.svg" alt=""></td>
                         <td>Fra 60 000,-</td>
                     </tr>
                     <tr>
-                        <td>STEK DYNOblack-matte <span class="price-asterisk">*</span></td>
+                        <td>STEK DYNOblack-matte <span class="price-asterisk">*</span> <img data-image="black-matte"
+                                class="pricelist-image-button" src="static/images/image-icon.svg" alt=""></td>
                         <td>Fra 60 000,-</td>
                     </tr>
                     <tr>
-                        <td>STEK DYNOpurple <span class="price-asterisk">*</span></td>
+                        <td>STEK DYNOpurple <span class="price-asterisk">*</span> <img data-image="purple"
+                                class="pricelist-image-button" src="static/images/image-icon.svg" alt=""></td>
                         <td>Fra 60 000,-</td>
                     </tr>
                     <tr>
-                        <td>STEK DYNOmiami-blue <span class="price-asterisk">*</span></td>
+                        <td>STEK DYNOmiami-blue <span class="price-asterisk">*</span> <img data-image="miami-blue"
+                                class="pricelist-image-button" src="static/images/image-icon.svg" alt=""></td>
                         <td>Fra 60 000,-</td>
                     </tr>
                     <tr>
-                        <td>STEK DYNOgray <span class="price-asterisk">*</span></td>
+                        <td>STEK DYNOgray <span class="price-asterisk">*</span> <img data-image="gray"
+                                class="pricelist-image-button" src="static/images/image-icon.svg" alt=""></td>
+                        <td>Fra 60 000,-</td>
+                    </tr>
+                    <tr>
+                        <td>STEK DYNOforged-red wine <span class="price-asterisk">*</span> <img data-image="red-wine"
+                                class="pricelist-image-button" src="static/images/image-icon.svg" alt=""></td>
                         <td>Fra 60 000,-</td>
                     </tr>
                 </table>

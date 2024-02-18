@@ -22,33 +22,57 @@ function toPlainPx(element, style) {
   return parseFloat(style);
 }
 
-function hamburgerToCross() {
-
+function mobileNavOpen() {
+  body = document.querySelector('body');
   navLinks = document.querySelector('.nav-links');
   overNav = document.querySelector('.over-nav');
-  document.querySelector('#hamburger-icon').addEventListener('click', function () {
+  hamburgerIcon = document.querySelector('#hamburger-icon');
+
+  hamburgerIcon.addEventListener('click', function () {
+
+    setTimeout(() => {
+      navToggle();
+    }, 1);
+
+  });
+
+const navListener = new AbortController();
+  function navToggle() {
     navLinks.querySelectorAll('a').forEach((child) => {
       child.classList.toggle('transition');
     })
+    if (navLinks.classList.contains('active')) {
+
+      navListener.abort();
+    } else {  
+      window.addEventListener('click', windowListener, {signal: navListener.signal}); 
+    }
+
+
+    function windowListener(e) {
+      if (navLinks.classList.contains('active') && (!e.target.closest('.over-nav') && !e.target.closest('nav'))) {
+        navToggle();
+      }
+    }
+
 
 
     navLinks.classList.toggle('active');
     overNav.classList.toggle('active');
-    this.classList.toggle('active');
-    this.querySelectorAll('div').forEach((element) => element.classList.remove('animation-off'));
+    hamburgerIcon.classList.toggle('active');
+    hamburgerIcon.querySelectorAll('div').forEach((element) => element.classList.remove('animation-off'));
 
-  });
+  }
 }
-
 function mobileNavTransition() {
   navLinks = document.querySelector('.nav-links');
   overNav = document.querySelector('.over-nav');
   if (window.innerWidth < 769) {
     setTimeout(() => {
-        navLinks.classList.add('nav-transition');
-        overNav.classList.add('nav-transition');
+      navLinks.classList.add('nav-transition');
+      overNav.classList.add('nav-transition');
     }, 1);
-  
+
   } else {
     navLinks.classList.remove('nav-transition');
     overNav.classList.remove('nav-transition');
@@ -57,7 +81,7 @@ function mobileNavTransition() {
 
 document.addEventListener("DOMContentLoaded", () => {
   contentFade();
-  hamburgerToCross();
+  mobileNavOpen();
   mobileNavTransition();
 });
 

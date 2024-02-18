@@ -39,7 +39,7 @@ function modalOpener() {
       if (!e.target.closest('.modal-inner-gallery')) {
         closeModal();
       }
-    })
+    });
   
     modalCards.forEach((modalCard) => {
       modalCard.addEventListener('click', () => {
