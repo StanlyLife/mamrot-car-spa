@@ -9,7 +9,7 @@
     --secondary-bg: #0d0707;
     --tertiary-bg: #d9d9d9;
 
-    --white-text: #fff;
+    --white-text: #d9d9d9;
 
     --main-font: Urbanist, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
@@ -77,12 +77,6 @@ ul {
 .modal-inner-gallery #modal-close {
     top: 3rem;
     right: 3rem;
-}
-
-.modal-inner-gallery .modal-content {
-
-
-
 }
 
 .modal-inner-gallery .modal-content img {
@@ -248,7 +242,7 @@ nav a {
 
 .hero-text-lg {
     z-index: 10;
-
+    color: #fff;
     text-align: center;
 
 }
@@ -524,6 +518,27 @@ nav a {
     right: -2%;
 }
 
+#review-logo-facebook {
+    height: 2rem;
+}
+
+#review-logo-google {
+    height: 2.7rem;
+}
+
+.review-summaries {
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.stars-reviews {
+    font-size: 2rem;
+}
+
+.stars-reviews img {
+    height: 2.5rem;
+}
+
 .red {
     color: var(--accent-color);
 }
@@ -601,7 +616,7 @@ nav a {
     transform: scale(1.05);
 }
 
-.index-service-card a:hover{
+.index-service-card a:hover {
     transform: none;
 }
 
@@ -774,7 +789,7 @@ nav a {
 
 .service-category-text {
     max-width: 50%;
-    font-weight:300;
+    font-weight: 300;
     font-size: 2.5rem;
     padding: 8rem 2rem;
 }
@@ -826,7 +841,7 @@ nav a {
     font-size: 4rem;
 }
 
-.prices-main hr{
+.prices-main hr {
     height: 0.2rem;
     background-color: var(--white-text);
 }
@@ -852,19 +867,20 @@ nav a {
     align-items: center;
     font-size: 4rem;
     width: 100%;
-    border-collapse:collapse ;
-   
+    border-collapse: collapse;
+
 }
 
 .price th {
-    text-align: left;    
+    text-align: left;
     border-left: 0;
     border-right: 0;
     border-bottom: 1px solid;
 
 }
 
-.price th, .price td {
+.price th,
+.price td {
     padding: 2rem;
 }
 
@@ -918,10 +934,11 @@ nav a {
     font-size: 2rem;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
     padding: 1rem 2rem;
     font-size: 2rem;
-    background: var(--tertiary-bg);    
+    background: var(--tertiary-bg);
     font-family: var(--main-font);
     border: none;
 }
@@ -976,7 +993,7 @@ nav a {
 .email-animation-whizz {
     right: 73%;
     top: 30%;
-    float:right;
+    float: right;
     height: 30%;
     transform-origin: 100% 50%;
     transform: scaleX(0);
@@ -988,20 +1005,21 @@ nav a {
     transition-duration: 0.6s;
 }
 
-.modal.active .email-animation-tick, .modal.active .email-animation-whizz {
-    transform: none;    
+.modal.active .email-animation-tick,
+.modal.active .email-animation-whizz {
+    transform: none;
     transition-delay: 0.6s;
     transition-duration: 0.6s;
 }
 
-.modal-inner-contact  {
+.modal-inner-contact {
     padding: 8rem;
 
     position: relative;
 }
 
 .modal-inner-contact .modal-content {
-        align-items: center;
+    align-items: center;
 }
 
 .modal-inner-contact #modal-close {
@@ -1177,12 +1195,13 @@ nav a {
         transform: translateX(50%) scale(0, 1);
 
     }
+
     .nav-transition {
         transition: transform 0.6s;
     }
 
     .nav-links *,
-    .over-nav > * {
+    .over-nav>* {
         opacity: 0;
         transform: translateY(-20rem);
 
@@ -1190,7 +1209,7 @@ nav a {
     }
 
     .nav-links.active *,
-    .over-nav.active > * {
+    .over-nav.active>* {
         opacity: 1;
         transition-delay: 0.7s;
         transition-duration: 0.7s;
@@ -1216,6 +1235,7 @@ nav a {
     .over-nav img {
         height: 2rem;
     }
+
     .over-nav-socials {
         gap: 4rem;
     }
@@ -1410,7 +1430,7 @@ nav a {
     .price-asterisk {
         font-size: 1rem;
     }
-    
+
     .prices-note {
         font-size: 1rem;
         padding-left: 2rem;
