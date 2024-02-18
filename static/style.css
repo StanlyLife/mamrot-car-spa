@@ -963,6 +963,11 @@ nav a {
     height: 800px;
 }
 
+.map-contact-container .toolbox {
+    justify-content: flex-start;
+    gap: 5rem;
+}
+
 .email-animation {
     height: 30rem;
     width: 40rem;
