@@ -1424,6 +1424,10 @@ nav a {
         height: 300px;
     }
 
+    .review-summaries {
+        padding-left: 4rem;
+    }
+
     .image-grid {
         padding: 0;
     }
