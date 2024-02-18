@@ -16,11 +16,11 @@
 }
 
 ::-webkit-scrollbar {
-    width: 0.5rem;
+    width: 1rem;
 }
 
 ::-webkit-scrollbar-track {
-    background: none;
+    background: #000;
     border-radius: 3rem;
 }
 
@@ -35,6 +35,10 @@ body {
     color: var(--white-text);
     font-size: 2.4rem;
     background: var(--primary-bg);
+}
+
+ul {
+    list-style-position: inside;
 }
 
 .primary-bg {
@@ -186,7 +190,7 @@ nav {
 }
 
 .nav-logo {
-    height: 6rem;
+    height: 7rem;
 }
 
 .flex {
@@ -369,7 +373,7 @@ nav a {
     width: 100%;
     border-radius: 0.5rem;
     font-weight: 300;
-    font-size: 2rem;
+    font-size: 2.5rem;
     padding: 0;
     margin: 25rem 0;
 
@@ -391,7 +395,7 @@ nav a {
 }
 
 .index-about h2 {
-    font-size: 5rem;
+    font-size: 6rem;
     margin-bottom: 1rem;
 }
 
@@ -817,6 +821,11 @@ nav a {
     text-decoration: underline;
 }
 
+.prices-main {
+    padding-bottom: 15rem;
+    font-size: 4rem;
+}
+
 .prices-main hr{
     height: 0.2rem;
     background-color: var(--white-text);
@@ -833,6 +842,11 @@ nav a {
     background-size: cover;
 }
 
+.underline {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .price {
     justify-content: space-between;
     align-items: center;
@@ -841,8 +855,6 @@ nav a {
     border-collapse:collapse ;
    
 }
-
-
 
 .price th {
     text-align: left;    
@@ -856,16 +868,22 @@ nav a {
     padding: 2rem;
 }
 
+.price td {
+    font-weight: 300;
+}
+
+
 .price-head {
     margin: 0;
     padding-top: 25rem;
+    font-weight: 500;
 }
 
 .price-asterisk {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
-.prices-note {
+.price-note {
     font-size: 2rem;
     padding-left: 2rem;
 }
@@ -1127,6 +1145,11 @@ nav a {
         font-size: 3rem;
     }
 
+    .contact-container {
+        padding: 4rem;
+
+    }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -1362,8 +1385,6 @@ nav a {
         font-size: 3rem;
     }
 
-    .hero-text-lg {}
-
     .toolbox .flex {
         flex-direction: column;
 
@@ -1408,6 +1429,10 @@ nav a {
         flex-direction: column;
         align-items: center;
         padding: 3rem;
+    }
+
+    .contact-container .flex img {
+        height: 2.5rem;
     }
 
     .contact-map-container iframe {

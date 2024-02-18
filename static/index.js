@@ -104,7 +104,7 @@ function modalOpener() {
         setTimeout(() => {
           carousel.classList.remove("carousel-transition");
           timer = false;
-        }, 500);
+        }, 499);
       }
   
       if (carouselContainer.dataset.buttons) {
