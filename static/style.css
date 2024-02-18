@@ -434,7 +434,7 @@ nav a {
 
 .gallery-bg {
     padding: 10rem 0;
-    background: url(/static/images/gallery-bg.jpg);
+    background: url("./images/gallery-bg.jpg");
     background-repeat: repeat-y;
     background-size: cover;
 }
@@ -767,7 +767,7 @@ nav a {
 .service-categories {
     margin: 0;
     position: relative;
-    background: url(/static/images/services-bg.jpg);
+    background: url("./images/services-bg.jpg");
     background-repeat: repeat-y;
     background-size: cover;
 }
@@ -837,7 +837,7 @@ nav a {
 }
 
 .prices-bg {
-    background: url(/static/images/prices-bg.jpg);
+    background: url("./images/prices-bg.jpg");
     background-repeat: repeat-y;
     background-size: cover;
 }
