@@ -233,7 +233,7 @@ a:hover {
 }
 
 nav a {
-    color: var(--white-text);
+    color: #fff;
 }
 
 .button {
