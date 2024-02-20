@@ -1467,6 +1467,21 @@ nav a {
         padding: 0;
     }
 
+    .gallery-page-selector {
+        font-size: 4rem;
+        gap: 1rem;
+        padding: 8rem 0;
+    }
+    .gallery-page-selector a {
+
+        padding: 2rem 1.5rem;
+    }
+    
+    .gallery-selector-chev {
+        transform: scale(2) translateY(-2%);
+        padding: 0 2rem;
+    }
+
     .price {
         font-size: 2rem;
     }
