@@ -1437,8 +1437,12 @@ nav a {
         padding: 0;
     }
 
+    .about-card {
+        padding: 3rem;
+    }
+
     #index-about-img {
-        width: 40%;
+        width: 50%;
     }
 
     .index-services .index-service-card {
