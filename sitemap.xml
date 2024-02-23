@@ -13,12 +13,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mamrotcarspa.no/index.html</loc>
-    <lastmod>2024-02-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://mamrotcarspa.no/contact.html</loc>
     <lastmod>2024-02-20</lastmod>
     <changefreq>daily</changefreq>
@@ -34,7 +28,7 @@
     <loc>https://mamrotcarspa.no/index-en.html</loc>
     <lastmod>2024-02-20</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://mamrotcarspa.no/gallery.html</loc>
@@ -46,7 +40,7 @@
     <loc>https://mamrotcarspa.no/services-en.html</loc>
     <lastmod>2024-02-20</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://mamrotcarspa.no/gallery1.html</loc>
@@ -64,7 +58,7 @@
     <loc>https://mamrotcarspa.no/contact-en.html</loc>
     <lastmod>2024-02-20</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://mamrotcarspa.no/gallery3.html</loc>
@@ -82,7 +76,7 @@
     <loc>https://mamrotcarspa.no/gallery-en.html</loc>
     <lastmod>2024-02-20</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://mamrotcarspa.no/prices-en.html</loc>
@@ -94,24 +88,24 @@
     <loc>https://mamrotcarspa.no/gallery3-en.html</loc>
     <lastmod>2024-02-20</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.7</priority>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://mamrotcarspa.no/gallery1-en.html</loc>
     <lastmod>2024-02-20</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.7</priority>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://mamrotcarspa.no/gallery2-en.html</loc>
     <lastmod>2024-02-20</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.7</priority>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://mamrotcarspa.no/gallery4-en.html</loc>
     <lastmod>2024-02-20</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.7</priority>
+    <priority>0.4</priority>
   </url>
 </urlset>
