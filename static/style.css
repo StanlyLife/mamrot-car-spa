@@ -732,8 +732,13 @@ nav a {
     transform: scale(1.1);
 }
 
+.index-contact .makers-mark {
+    padding-bottom: 0;
+}
+
 .makers-mark {
     align-items: center;
+    padding: 5rem 0;
 }
 
 .makers-mark p {
