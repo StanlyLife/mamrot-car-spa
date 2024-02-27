@@ -33,7 +33,7 @@ body {
     font-family: var(--main-font);
     margin: 0;
     color: var(--white-text);
-    font-size: 2.4rem;
+    font-size: 2rem;
     background: var(--primary-bg);
 }
 
@@ -265,7 +265,7 @@ nav a {
 }
 
 .hero-text-lg {
-    font-size: 5.5rem;
+    font-size: 4rem;
     font-weight: 700;
 
 }
@@ -278,7 +278,7 @@ nav a {
 }
 
 .hero-text-sm {
-    font-size: 3.8rem;
+    font-size: 3rem;
     font-weight: 400;
     text-align: left;
     line-height: 6rem;
@@ -389,7 +389,6 @@ nav a {
     width: 100%;
     border-radius: 0.5rem;
     font-weight: 300;
-    font-size: 2.5rem;
     padding: 0;
     margin: 25rem 0;
 
@@ -427,7 +426,7 @@ nav a {
 }
 
 .toolbox {
-    font-size: 4rem;
+    font-size: 3rem;
     justify-content: space-between;
     padding: 10rem 0;
     margin: 0;
@@ -817,7 +816,7 @@ nav a {
 .service-category-text {
     max-width: 50%;
     font-weight: 300;
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding: 8rem 2rem;
 }
 
