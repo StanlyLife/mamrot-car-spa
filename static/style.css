@@ -84,6 +84,7 @@ ul {
     max-width: 95vw;
     object-fit: contain;
 }
+
 .modal .modal-inner-prices {
 
     overflow: hidden;
@@ -213,7 +214,7 @@ nav {
 }
 
 .nav-links {
-    font-size: 4rem;
+    font-size: 3rem;
     width: 70%;
     justify-content: space-between;
     display: flex;
@@ -234,6 +235,36 @@ a:hover {
 
 nav a {
     color: #fff;
+}
+
+.dropdown {
+    position: relative;
+    display: flex;
+}
+
+.dropdown:hover .dropdown-content {
+
+    max-height: 400px;
+}
+
+.dropdown-content {
+    max-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: 0.4s;
+    font-size: 2rem;
+    position: absolute;
+    top: 100%;
+    left: -4rem;
+    right: -20rem;
+    background-color: #000;
+    padding-top: 2rem;
+}
+
+.dropdown-content a {
+    transform-origin: left;
+    padding: 2rem;
 }
 
 .button {
@@ -754,6 +785,42 @@ nav a {
 }
 
 
+#service-main {
+    align-items: center;
+    gap: 4rem;
+    padding: 8rem 8rem;
+}
+
+#service-main h1 {
+    margin-top: 0;
+}
+
+#service-main .button {
+    margin-top: 4rem;
+}
+
+#service-image {
+    object-fit: contain;
+    max-width: 45%;
+}
+
+#service-top {
+    background-image: url(/static/images/service-bg-top.jpg);
+    background-size: cover;
+    background-position: bottom;
+    padding-bottom: 8rem;
+}
+
+#service-bottom {
+    padding: 8rem 0;
+    background-image: url(/static/images/service-bg-bottom.jpg);
+    background-size: cover;
+}
+
+#service-bottom h2 {
+    text-align: left;
+    padding-left: 2rem;
+}
 
 #services-hero h1 {
     font-size: 6.4rem;
@@ -1232,6 +1299,25 @@ nav a {
         transform: translateX(50%) scale(0, 1);
     }
 
+    .dropdown {
+        flex-direction: column;
+    }
+
+    .dropdown span {
+        align-self: center;
+    }
+
+    .dropdown-content {
+        position: unset;
+        top: 0;
+        align-items: center;
+        background-color: unset;
+    }
+
+    .dropdown-content a {
+        padding: 1rem 0;
+    }
+
     .primary-hero-buttons {
         display: none;
     }
@@ -1244,17 +1330,16 @@ nav a {
         transition: transform 0.6s;
     }
 
-    .nav-links *,
-    .over-nav>* {
+    .nav-links .nav-link,
+    .over-nav>.nav-link {
         opacity: 0;
         transform: translateY(-20rem);
-
-
     }
 
-    .nav-links.active *,
-    .over-nav.active>* {
+    .nav-links.active .nav-link,
+    .over-nav.active>.nav-link {
         opacity: 1;
+        transition-property: transform opacity;
         transition-delay: 0.7s;
         transition-duration: 0.7s;
         transform: none;
@@ -1484,11 +1569,12 @@ nav a {
         gap: 1rem;
         padding: 8rem 0;
     }
+
     .gallery-page-selector a {
 
         padding: 2rem 1.5rem;
     }
-    
+
     .gallery-selector-chev {
         transform: scale(2) translateY(-2%);
         padding: 0 2rem;
