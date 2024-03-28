@@ -244,7 +244,7 @@ nav a {
 
 .dropdown:hover .dropdown-content {
 
-    max-height: 400px;
+    max-height: 500px;
 }
 
 .dropdown-content {
@@ -808,16 +808,21 @@ nav a {
     background-image: url(/static/images/service-bg-top.jpg);
     background-size: cover;
     background-position: bottom;
-    padding-bottom: 8rem;
+    padding-bottom: 2rem;
+}
+
+#service-top .services-category {
+    padding:0 ;
 }
 
 #service-bottom {
-    padding: 8rem 0;
+    padding: 2rem 0 8rem 0;
     background-image: url(/static/images/service-bg-bottom.jpg);
     background-size: cover;
 }
 
-#service-bottom h2 {
+#service-bottom h2,
+#service-bottom h3 {
     text-align: left;
     padding-left: 2rem;
 }
@@ -1288,14 +1293,13 @@ nav a {
     .over-nav {
         width: 50%;
         box-sizing: border-box;
-        font-size: 4rem;
+        font-size: 3.5rem;
         position: fixed;
         justify-content: space-between;
-        padding: 10rem 0;
+        padding: 8rem 0;
         align-items: center;
         right: 0;
         background: var(--secondary-bg);
-        overflow: hidden;
         transform: translateX(50%) scale(0, 1);
     }
 
@@ -1348,16 +1352,16 @@ nav a {
     .nav-links {
         flex-direction: column;
         top: 0;
-        height: 65%;
+        height: 75%;
     }
 
     .over-nav {
         font-size: 2rem;
         flex-direction: column-reverse;
         justify-content: flex-start;
-        gap: 8rem;
+        gap: 4rem;
         bottom: 0;
-        height: 35%;
+        height: 25%;
         z-index: 111111;
     }
 
@@ -1591,6 +1595,10 @@ nav a {
     .prices-note {
         font-size: 1rem;
         padding-left: 2rem;
+    }
+
+    .pricelist-image-button {
+        height: 2rem;
     }
 
     .services-category {
