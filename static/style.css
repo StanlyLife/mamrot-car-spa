@@ -1356,7 +1356,7 @@ nav a {
     .nav-links {
         flex-direction: column;
         top: 0;
-        height: 75%;
+        height: 75lvh;
     }
 
     .over-nav {
@@ -1364,8 +1364,8 @@ nav a {
         flex-direction: column-reverse;
         justify-content: flex-start;
         gap: 4rem;
-        bottom: 0;
-        height: 25%;
+        top: 75lvh;
+        height: 25lvh;
         z-index: 111111;
     }
 
