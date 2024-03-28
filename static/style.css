@@ -1159,8 +1159,7 @@ nav a {
 
     .dropdown-content {
 
-        top: calc(100% + 2rem);
-
+        padding-top: 2rem;
     }
 
     .modal-inner {
