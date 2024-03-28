@@ -243,7 +243,6 @@ nav a {
 }
 
 .dropdown:hover .dropdown-content {
-
     max-height: 500px;
 }
 
@@ -258,13 +257,13 @@ nav a {
     top: 100%;
     left: -4rem;
     right: -20rem;
-    background-color: #000;
-    padding-top: 2rem;
+    padding-top: 2.7rem;
 }
 
 .dropdown-content a {
     transform-origin: left;
     padding: 2rem;
+    background-color: #000;
 }
 
 .button {
@@ -812,7 +811,7 @@ nav a {
 }
 
 #service-top .services-category {
-    padding:0 ;
+    padding: 0;
 }
 
 #service-bottom {
@@ -1156,6 +1155,12 @@ nav a {
 @media only screen and (max-width: 1200px) {
     .over-nav {
         padding-left: 5%;
+    }
+
+    .dropdown-content {
+
+        top: calc(100% + 2rem);
+
     }
 
     .modal-inner {
