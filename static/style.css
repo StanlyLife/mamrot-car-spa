@@ -337,6 +337,7 @@ nav a {
     left: 0;
     width: 100%;
     height: 100vh;
+    object-position: 50% 42%;
 }
 
 #hero-image-contact,
@@ -864,7 +865,7 @@ nav a {
 }
 
 #index-lorry-image {
-    object-position: 50% 100%;
+    object-position: 0% 30%;
 }
 
 .services-category div h2 {
@@ -1196,6 +1197,12 @@ nav a {
 
     .container {
         padding: 0 3rem;
+    }
+
+    .hero {
+        justify-content: flex-end;
+        padding-bottom: 15vh !important;
+        gap: 6rem;
     }
 
     .hero-text-lg {
