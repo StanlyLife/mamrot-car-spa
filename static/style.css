@@ -651,6 +651,11 @@ nav a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    object-fit: cover;
+    height: auto;
+    width: auto;
+    max-width: 180%;
+    max-height: 180%;
 }
 
 .gallery-image:hover {
