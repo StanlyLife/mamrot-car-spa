@@ -144,7 +144,10 @@ ul {
 }
 
 .modal-content p,
-.modal-content h3 {
+.modal-content ul,
+.modal-content ol,
+.modal-content h3,
+.modal-content h4 {
   padding: 1rem 5rem;
 }
 
