@@ -275,7 +275,8 @@ nav a {
 .hero {
   box-sizing: border-box;
   height: calc(100vh - 17rem);
-  justify-content: space-around;
+  justify-content: center;
+  gap: 6rem;
   align-items: center;
 }
 
@@ -877,6 +878,10 @@ nav a {
   left: 0;
   height: 100%;
   width: 45%;
+}
+
+#services-individual-img {
+  margin-top: unset;
 }
 
 #index-lorry-image {
