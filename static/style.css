@@ -151,6 +151,12 @@ ul {
   padding: 1rem 5rem;
 }
 
+.modal-content ol h4, 
+.modal-content ol p
+{
+  padding-left: unset;
+}
+
 h2 {
   margin: 0;
   text-align: center;
