@@ -1,551 +1,662 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZE3HRXHBGC"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZE3HRXHBGC"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'G-ZE3HRXHBGC');
+      gtag("config", "G-ZE3HRXHBGC");
     </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover transparent pricing for our comprehensive car detailing services.">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover transparent pricing for our comprehensive car detailing services."
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,400;0,500;0,700;1,300&display=swap"
-        rel="stylesheet">
-    <link rel="icon" href="static/images/logo-no-text.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,400;0,500;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="static/images/logo-no-text.svg" />
     <script src="static/app.js"></script>
     <script src="static/prices.js"></script>
-    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/style.css" />
     <title>Prices | Mamrot CarSpa & Detailing</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="over-nav">
-        <div class="over-nav-socials">
-            <a href="https://www.facebook.com/profile.php?id=100086318628410"><img
-                    src="static/images/facebook-white.svg" alt=""></a>
-            <a href="https://www.tiktok.com/@mamrot.carspa.detailing"><img src="static/images/tiktok-white.svg"
-                    alt=""></a>
-            <a href="https://www.instagram.com/carspadetailing_oslo/"><img src="static/images/instagram-white.svg"
-                    alt=""></a>
-        </div>
-        <a href="tel: 004793991633" class="tool flex">(+47) 939 91 633</a>
-        <div class="language-selector">
-            <a href="index-en">EN</a>
-            <span>|</span>
-            <a href="index">NO</a>
-        </div>
+      <div class="over-nav-socials">
+        <a href="https://www.facebook.com/profile.php?id=100086318628410"
+          ><img src="static/images/facebook-white.svg" alt=""
+        /></a>
+        <a href="https://www.tiktok.com/@mamrot.carspa.detailing"
+          ><img src="static/images/tiktok-white.svg" alt=""
+        /></a>
+        <a href="https://www.instagram.com/carspadetailing_oslo/"
+          ><img src="static/images/instagram-white.svg" alt=""
+        /></a>
+      </div>
+      <a href="tel: 004793991633" class="tool flex">(+47) 939 91 633</a>
+      <div class="language-selector">
+        <a href="index-en">EN</a>
+        <span>|</span>
+        <a href="index">NO</a>
+      </div>
     </div>
     <nav>
-        <img class="nav-logo" src="static/images/logo.svg" alt="">
-        <div class="nav-links">
-            <a href="index-en">Home</a>
-            <a href="prices-en">Prices</a>
-            <a href="services-en">Sevices</a>
-            <a href="gallery-en">Gallery</a>
-            <a href="contact-en">Contact</a>
-        </div>
-        <div id="hamburger-icon">
-            <div id="line-1" class="animation-off"></div>
-            <div id="line-2" class="animation-off"></div>
-            <div id="line-3" class="animation-off"></div>
-        </div>
+      <img class="nav-logo" src="static/images/logo.svg" alt="" />
+      <div class="nav-links">
+        <a href="index-en">Home</a>
+        <a href="prices-en">Prices</a>
+        <a href="services-en">Sevices</a>
+        <a href="gallery-en">Gallery</a>
+        <a href="contact-en">Contact</a>
+      </div>
+      <div id="hamburger-icon">
+        <div id="line-1" class="animation-off"></div>
+        <div id="line-2" class="animation-off"></div>
+        <div id="line-3" class="animation-off"></div>
+      </div>
     </nav>
 
-
     <div class="modal">
-
-        <div class="modal-inner-prices"> <button id="modal-close">close</button>
-        </div>
+      <div class="modal-inner-prices">
+        <button id="modal-close">close</button>
+      </div>
     </div>
 
-    <img src="static/images/prices-hero.jpg" alt="" id="hero-image">
+    <img src="static/images/prices-hero.jpg" alt="" id="hero-image" />
 
     <div class="mask-container">
-        <section class="hero container flex flex-column">
+      <section class="hero container flex flex-column">
+        <h1 class="hero-text-lg">Prices</h1>
 
-            <h1 class="hero-text-lg">
-                Prices
-            </h1>
-
-
-            <div class="flex">
-                <a href="contact-en" class="hero-buttons button">Book Appointment</a>
-            </div>
-        </section>
-        <div class="prices-bg">
-            <section class="container prices-main">
-                <img id="prices-klarna" src="static/images/pay-with-klarna-en.svg" alt="">
-
-                <h2 id="helfoliering" class="price-head">Full Car Wrapping</h2>
-                <h3>Colour Change - Full Wrapping - Colour Wrapping</h3>
-                <table class="price">
-                    <tr>
-                        <th>Service</th>
-                        <th>Sedan</th>
-                        <th>SUV</th>
-                    </tr>
-                    <tr>
-                        <td>PWF - Platinum Wrapping Film <span class="price-asterisk">*</span> <img data-image="colour-palette" class="pricelist-image-button"
-                            src="static/images/image-icon.svg" alt=""></td>
-                        <td>40 000,-</td>
-                        <td>45 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>3M<span class="price-asterisk">*</span> <img data-image="colour-palette" class="pricelist-image-button"
-                            src="static/images/image-icon.svg" alt=""></td>
-                        <td>33 000,-</td>
-                        <td>35 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>Avery Dennison<span class="price-asterisk">*</span> <img data-image="colour-palette" class="pricelist-image-button"
-                            src="static/images/image-icon.svg" alt=""></td>
-                        <td>33 000,-</td>
-                        <td>35 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>Oracal 970RA<span class="price-asterisk">*</span> <img data-image="colour-palette" class="pricelist-image-button"
-                            src="static/images/image-icon.svg" alt=""></td>
-                        <td>33 000,-</td>
-                        <td>35 000,-</td>
-                    </tr>
-
-                    <tr>
-                        <td>Tesla (Model S, X, Y)</td>
-                        <td>30 000,-</td>
-                        <td>30 000,-</td>
-                    </tr>
-                </table>
-
-                <p class="price-note"><span class="price-asterisk">*</span>5 year installation warranty.</p>
-                <h2 id="decor" class="price-head">Decor</h2>
-                <h3>Chrome Delete</h3>
-                <table class="price">
-                    <tr>
-                        <th>Service</th>
-                        <th>Price</th>
-                    </tr>
-                    <tr>
-                        <td>Decor Installation (per hour)</td>
-                        <td>700,-</td>
-                    </tr>
-                    <tr>
-                        <td>Decor Removal (per time)</td>
-                        <td>700,-</td>
-                    </tr>
-                    <tr>
-                        <td>Chrome Delete - Around Windows/Grille</td>
-                        <td>6 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>Chrome Delete - Full Car <span class="price-asterisk">*</span></td>
-                        <td>Fra 10 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>Chrome Delete - Roof Rails</td>
-                        <td>3 400,-</td>
-                    </tr>
-                </table>
-                <p class="price-note">
-                    Colors available for chrome delete: matte, satin, glossy.</p>
-                <p class="price-note"><span class="price-asterisk">*</span>
-                    Around windows, bumpers, roof rails, grille.
-                </p>
-
-
-                <h2 id="ppf" class="price-head">Paint Protection Foil - PPF</h2>
-                <table class="price">
-                    <tr>
-                        <th>Service</th>
-                        <th>Price - Sedan/Station Wagon</th>
-                    </tr>
-                    <tr>
-                        <td>Full Car (Gloss) <img data-image="gloss" class="pricelist-image-button"
-                                src="static/images/image-icon.svg" alt=""></td>
-                        <td>From 45 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>Full Car (Matte) <img data-image="matte" class="pricelist-image-button"
-                                src="static/images/image-icon.svg" alt=""></td>
-                        <td>50 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>Full Front <span class="price-asterisk">*</span></td>
-                        <td>19 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>Most Exposed Areas <span class="price-asterisk">**</span></td>
-                        <td>27 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>Door Channels</td>
-                        <td>6 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>Wheel Arch (front and back)</td>
-                        <td>3 500,-</td>
-                    </tr>
-                    <tr>
-                        <td>Loading Zone</td>
-                        <td>2 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>Lights (front or back, 2 lights total) <span class="price-asterisk">***</span></td>
-                        <td>3 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>Lights (front and back, 4 lights total) <span class="price-asterisk">***</span></td>
-                        <td>5 000,-</td>
-                    </tr>
-
-                </table>
-                <p class="price-note"><span class="price-asterisk">*</span>Bonnet, front bumper, front lights.</p>
-                <p class="price-note"><span class="price-asterisk">**</span>Bonnet, front bumper, front lights, fenders,
-                    door channels, A-pillar, mirror housings, cargo area.</p>
-                <p class="price-note"><span class="price-asterisk">***</span>Various colors/styles available. Click on a
-                    color for a picture example:
-                    <span data-image="shade" class="underline pricelist-image-button">DYNOshade</span>,
-                    <span data-image="smoke" class="underline pricelist-image-button">DYNOsmoke</span>
-                    , <span data-image="yellow" class="underline pricelist-image-button">DYNOyellow</span>,
-                    <span data-image="gloss" class="underline pricelist-image-button">gloss (transparant)</span>.
-                </p>
-
-                <h2 class="price-head">Colour Change</h2>
-                <h3>Coloured PPF - Fashion</h3>
-                <table class="price">
-                    <tr>
-                        <th>Colour</th>
-                        <th>Price</th>
-                    </tr>
-                    <tr>
-                        <td>STEK DYNOgreen <span class="price-asterisk">*</span> <img data-image="green"
-                                class="pricelist-image-button" src="static/images/image-icon.svg" alt=""></td>
-                        <td>From 60 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>STEK DYNOred <span class="price-asterisk">*</span> <img data-image="red"
-                                class="pricelist-image-button" src="static/images/image-icon.svg" alt=""></td>
-                        <td>From 60 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>STEK DYNOblack-gloss <span class="price-asterisk">*</span> <img data-image="black-gloss"
-                                class="pricelist-image-button" src="static/images/image-icon.svg" alt=""></td>
-                        <td>From 60 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>STEK DYNOblack-matte <span class="price-asterisk">*</span> <img data-image="black-matte"
-                                class="pricelist-image-button" src="static/images/image-icon.svg" alt=""></td>
-                        <td>From 60 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>STEK DYNOpurple <span class="price-asterisk">*</span> <img data-image="purple"
-                                class="pricelist-image-button" src="static/images/image-icon.svg" alt=""></td>
-                        <td>From 60 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>STEK DYNOmiami-blue <span class="price-asterisk">*</span> <img data-image="miami-blue"
-                                class="pricelist-image-button" src="static/images/image-icon.svg" alt=""></td>
-                        <td>From 60 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>STEK DYNOgray <span class="price-asterisk">*</span> <img data-image="gray"
-                                class="pricelist-image-button" src="static/images/image-icon.svg" alt=""></td>
-                        <td>From 60 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>STEK DYNOforged-red wine <span class="price-asterisk">*</span> <img data-image="red-wine"
-                                class="pricelist-image-button" src="static/images/image-icon.svg" alt=""></td>
-                        <td>From 60 000,-</td>
-                    </tr>
-                </table>
-                <p class="price-note"><span class="price-asterisk">*</span>10 years manufacturer's warranty, 5 years
-                    installation warranty. <br>
-                    Functions: </p>
-                <ul class="price-note">
-                    <li>Hydrophobic</li>
-                    <li>Resistant to chemicals</li>
-                    <li>Resistant to stains</li>
-                    <li>Stone chip protection</li>
-                    <li>Protects against scratches in the paing</li>
-                    <li>Protects against damage to the paint</li>
-                    <li>Self-healing</li>
-                </ul>
-
-                <h2 id="ceramic-coating" class="price-head">Sealant</h2>
-                <h3>Paint Correction - Ceramic Coating - Polishing</h3>
-                <table class="price">
-                    <tr>
-                        <th>Service</th>
-                        <th>Sedan</th>
-                        <th>SUV</th>
-                    </tr>
-                    <tr>
-                        <td>Paint Correction <span class="price-asterisk">*</span></td>
-                        <td>15 000,-</td>
-                        <td>15 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>Wrap Sealant (ceramic)</td>
-                        <td>4 000,-</td>
-                        <td>4 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>Scratch Removal 70% (2 stage polish)</td>
-                        <td>7 000,-</td>
-                        <td>9 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>Scratch Removal 90% (3 stage polish)</td>
-                        <td>10 000,-</td>
-                        <td>11 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>Ceramic Coating (24 months/25 000km)<span class="price-asterisk">**</span></td>
-                        <td>9 000,-</td>
-                        <td>10 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>Ceramic Coating (36 monts/40 000km)<span class="price-asterisk">**</span></td>
-                        <td>10 000,-</td>
-                        <td>11 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>Rim Treatment</td>
-                        <td>3 000,-</td>
-                        <td>3 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>Glass Treatment (with polish)</td>
-                        <td>4 000,-</td>
-                        <td>4 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>Boat Treatment - Marine Coating</td>
-                        <td>Upon Agreement</td>
-                        <td>Upon Agreement</td>
-                    </tr>
-                    <tr>
-                        <td>Window Polish (boat)</td>
-                        <td>Upon Agreement</td>
-                        <td>Upon Agreement</td>
-                    </tr>
-                    <tr>
-                        <td>Polish and Renovation (Boat)</td>
-                        <td>Upon Agreement</td>
-                        <td>Upon Agreement</td>
-                    </tr>
-                    <tr>
-                        <td>Wheel Loader Treatment</td>
-                        <td>Upon Agreement</td>
-                        <td>Upon Agreement</td>
-                    </tr>
-                    <tr>
-                        <td>Truck Treatment/Decor</td>
-                        <td>Upon Agreement</td>
-                        <td>Upon Agreement</td>
-                    </tr>
-                    <tr>
-                        <td>Motorsykkel Behandling</td>
-                        <td>Upon Agreement</td>
-                        <td>Upon Agreement</td>
-                    </tr>
-                    <tr>
-                        <td>Snowmobile Treatment</td>
-                        <td>Upon Agreement</td>
-                        <td>Upon Agreement</td>
-                    </tr>
-                    <tr>
-                        <td>Campervan Treatment</td>
-                        <td>Upon Agreement</td>
-                        <td>Upon Agreement</td>
-                    </tr>
-                </table>
-                <p class="price-note"><span class="price-asterisk">*</span> Spa Wash, 3 stage polish, ceramic coating
-                    36 months.</p>
-                <p class="price-note"><span class="price-asterisk">**</span> Includes Spa Wash, rim cleaning, 2 stage
-                    polish.</p>
-
-                <h2 id="other" class="price-head">Other Services</h2>
-                <table class="price">
-                    <tr>
-                        <th>Service</th>
-                        <th>Price</th>
-                    </tr>
-                    <tr>
-                        <td>Pre-Sale Shine <span class="price-asterisk">*</span></td>
-                        <td>6 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>Pre-Sale Shine with Interior Wash and Clean<span class="price-asterisk">**</span></td>
-                        <td>7 500,-</td>
-                    </tr>
-                    <tr>
-                        <td>Caliper Paint (long-term) <img data-image="calipers" class="pricelist-image-button"
-                                src="static/images/image-icon.svg" alt=""></td>
-                        <td>5 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>Rust Removal/Repair of Small Imperfections</td>
-                        <td>Upon Agreement</td>
-                    </tr>
-                </table>
-                <p class="price-note"><span class="price-asterisk">*</span> Spa Wash, 1 stage high gloss polish, rim
-                    cleaning,
-                    wax.</p>
-                <p class="price-note"><span class="price-asterisk">**</span> Interior wash and clean up to 3 hours.</p>
-
-                <h2 id="interior" class="price-head">Interior</h2>
-                <table class="price">
-                    <tr>
-                        <th>Service</th>
-                        <th>Price</th>
-                    </tr>
-                    <tr>
-                        <td>Thorough Interior Cleaning <span class="price-asterisk">*</span></td>
-                        <td>1 500,-</td>
-                    </tr>
-                    <tr>
-                        <td>Depp Interior Cleaning</td>
-                        <td>4 900,-</td>
-                    </tr>
-                    <tr>
-                        <td>Wet vac (floor, seats, headliner)</td>
-                        <td>3 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>Leather Cleaning and Impregnating</td>
-                        <td>3 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>Leather Treatment (up to 12 months)</td>
-                        <td>4 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>Leather Seat Repair</td>
-                        <td>Etter Avtale</td>
-                    </tr>
-                    <tr>
-                        <td>Imprgentation of Textile Seats (5 seats)</td>
-                        <td>1 500,-</td>
-                    </tr>
-                    <tr>
-                        <td>Wet Vac of Seats (5 seats)</td>
-                        <td>1 500,-</td>
-                    </tr>
-                    <tr>
-                        <td>Pack - Wet Vac + Impregnation of Textile Seats</td>
-                        <td>2 500,-</td>
-                    </tr>
-                    <tr>
-                        <td>Air Conditioning Clean (Remove Foul Odours)</td>
-                        <td>2 500,-</td>
-                    </tr>
-                    <tr>
-                        <td>Touchscreen Protection - PPF</td>
-                        <td>1 000,-</td>
-                    </tr>
-                    <tr>
-                        <td>Renovation of Leather Steering Wheel</td>
-                        <td>2 000,-</td>
-                    </tr>
-                </table>
-                <p class="price-note"><span class="price-asterisk">*</span> Up to 3 hours.</p>
-
-                <h2 id="windows" class="price-head">Solfilm</h2>
-                <table class="price">
-                    <tr>
-                        <th>Brand</th>
-                        <th>B-Pillar</th>
-                        <th>A-Pillar</th>
-                    </tr>
-                    <tr>
-                        <td>Llumar ATC <span class="price-asterisk">*</span></td>
-                        <td>5 500,-</td>
-                        <td>6 500,-</td>
-                    </tr>
-                </table>
-                <p class="price-note"><span class="price-asterisk">*</span> Lifetime manufacturer warranty.</p>
-
-
-                <h2>Sun Film Facade</h2>
-                <p class="price">Protect your home or office from heat gain on both glass doors and windows. Various
-                    types of sun films available. Price upon agreement.</p>
-            </section>
+        <div class="flex">
+          <a href="contact-en" class="hero-buttons button">Book Appointment</a>
         </div>
+      </section>
+      <div class="prices-bg">
+        <section class="container prices-main">
+          <img
+            id="prices-klarna"
+            src="static/images/pay-with-klarna-en.svg"
+            alt=""
+          />
+
+          <h2 id="helfoliering" class="price-head">Full Car Wrapping</h2>
+          <h3>Colour Change - Full Wrapping - Colour Wrapping</h3>
+          <table class="price">
+            <tr>
+              <th>Service</th>
+              <th>Sedan</th>
+              <th>SUV</th>
+            </tr>
+            <tr>
+              <td>
+                PWF - Platinum Wrapping Film
+                <span class="price-asterisk">*</span>
+                <img
+                  data-image="colour-palette"
+                  class="pricelist-image-button"
+                  src="static/images/image-icon.svg"
+                  alt=""
+                />
+              </td>
+              <td>40 000,-</td>
+              <td>45 000,-</td>
+            </tr>
+            <tr>
+              <td>
+                3M<span class="price-asterisk">*</span>
+                <img
+                  data-image="colour-palette"
+                  class="pricelist-image-button"
+                  src="static/images/image-icon.svg"
+                  alt=""
+                />
+              </td>
+              <td>33 000,-</td>
+              <td>35 000,-</td>
+            </tr>
+            <tr>
+              <td>
+                Avery Dennison<span class="price-asterisk">*</span>
+                <img
+                  data-image="colour-palette"
+                  class="pricelist-image-button"
+                  src="static/images/image-icon.svg"
+                  alt=""
+                />
+              </td>
+              <td>33 000,-</td>
+              <td>35 000,-</td>
+            </tr>
+            <tr>
+              <td>
+                Oracal 970RA<span class="price-asterisk">*</span>
+                <img
+                  data-image="colour-palette"
+                  class="pricelist-image-button"
+                  src="static/images/image-icon.svg"
+                  alt=""
+                />
+              </td>
+              <td>33 000,-</td>
+              <td>35 000,-</td>
+            </tr>
+
+            <tr>
+              <td>Tesla (Model S, X, Y)</td>
+              <td>30 000,-</td>
+              <td>30 000,-</td>
+            </tr>
+          </table>
+
+          <p class="price-note">
+            <span class="price-asterisk">*</span>5 year installation warranty.
+          </p>
+          <h2 id="decor" class="price-head">Decor</h2>
+          <h3>Chrome Delete</h3>
+          <table class="price">
+            <tr>
+              <th>Service</th>
+              <th>Price</th>
+            </tr>
+            <tr>
+              <td>Decor Installation (per hour)</td>
+              <td>700,-</td>
+            </tr>
+            <tr>
+              <td>Decor Removal (per time)</td>
+              <td>700,-</td>
+            </tr>
+            <tr>
+              <td>Chrome Delete - Around Windows/Grille</td>
+              <td>6 000,-</td>
+            </tr>
+            <tr>
+              <td>
+                Chrome Delete - Full Car <span class="price-asterisk">*</span>
+              </td>
+              <td>Fra 10 000,-</td>
+            </tr>
+            <tr>
+              <td>Chrome Delete - Roof Rails</td>
+              <td>3 400,-</td>
+            </tr>
+          </table>
+          <p class="price-note">
+            Colors available for chrome delete: matte, satin, glossy.
+          </p>
+          <p class="price-note">
+            <span class="price-asterisk">*</span>
+            Around windows, bumpers, roof rails, grille.
+          </p>
+
+          <h2 id="ppf" class="price-head">Paint Protection Foil - PPF</h2>
+          <table class="price">
+            <tr>
+              <th>Service</th>
+              <th>Price - Sedan/Station Wagon</th>
+            </tr>
+            <tr>
+              <td>
+                Full Car (Gloss)
+                <img
+                  data-image="gloss"
+                  class="pricelist-image-button"
+                  src="static/images/image-icon.svg"
+                  alt=""
+                />
+              </td>
+              <td>From 45 000,-</td>
+            </tr>
+            <tr>
+              <td>
+                Full Car (Matte)
+                <img
+                  data-image="matte"
+                  class="pricelist-image-button"
+                  src="static/images/image-icon.svg"
+                  alt=""
+                />
+              </td>
+              <td>50 000,-</td>
+            </tr>
+            <tr>
+              <td>Full Front <span class="price-asterisk">*</span></td>
+              <td>19 000,-</td>
+            </tr>
+            <tr>
+              <td>Most Exposed Areas <span class="price-asterisk">**</span></td>
+              <td>27 000,-</td>
+            </tr>
+            <tr>
+              <td>Door Channels</td>
+              <td>6 000,-</td>
+            </tr>
+            <tr>
+              <td>Wheel Arch (front and back)</td>
+              <td>3 500,-</td>
+            </tr>
+            <tr>
+              <td>Loading Zone</td>
+              <td>2 000,-</td>
+            </tr>
+            <tr>
+              <td>
+                Lights (front or back, 2 lights total)
+                <span class="price-asterisk">***</span>
+              </td>
+              <td>3 000,-</td>
+            </tr>
+            <tr>
+              <td>
+                Lights (front and back, 4 lights total)
+                <span class="price-asterisk">***</span>
+              </td>
+              <td>5 000,-</td>
+            </tr>
+          </table>
+          <p class="price-note">
+            <span class="price-asterisk">*</span>Bonnet, front bumper, front
+            lights.
+          </p>
+          <p class="price-note">
+            <span class="price-asterisk">**</span>Bonnet, front bumper, front
+            lights, fenders, door channels, A-pillar, mirror housings, cargo
+            area.
+          </p>
+          <p class="price-note">
+            <span class="price-asterisk">***</span>Various colors/styles
+            available. Click on a color for a picture example:
+            <span data-image="shade" class="underline pricelist-image-button"
+              >DYNOshade</span
+            >,
+            <span data-image="smoke" class="underline pricelist-image-button"
+              >DYNOsmoke</span
+            >
+            ,
+            <span data-image="yellow" class="underline pricelist-image-button"
+              >DYNOyellow</span
+            >,
+            <span data-image="gloss" class="underline pricelist-image-button"
+              >gloss (transparant)</span
+            >.
+          </p>
+
+          <h2 class="price-head">
+            Colorful PPF Films Protective Film for Color Change
+          </h2>
+          <h3>
+            Colored PPF films that not only protect against scratches, stone
+            chips, and UV rays but also give your car personality. Unlike
+            regular film, this film is exceptionally smooth, preventing the
+            "orange peel" effect. This means you get a completely clear and
+            shiny surface with exceptional gloss.
+          </h3>
+          <table class="price">
+            <tr>
+              <th>Color</th>
+              <th>Price</th>
+            </tr>
+            <tr>
+              <td>
+                3M Colored PPF - Protective film for your car (latest series)
+                <span class="price-asterisk">*</span>
+              </td>
+              <td>From 65,000,-</td>
+            </tr>
+            <tr>
+              <td>
+                GSWF Colored PPF - Protective film for your car
+                <span class="price-asterisk">*</span>
+              </td>
+              <td>From 55,000,-</td>
+            </tr>
+          </table>
+
+          <p class="price-note">
+            <span class="price-asterisk">*</span>10 years manufacturer's
+            warranty, 5 years installation warranty. <br />
+            Functions:
+          </p>
+          <ul class="price-note">
+            <li>Hydrophobic</li>
+            <li>Resistant to chemicals</li>
+            <li>Resistant to stains</li>
+            <li>Stone chip protection</li>
+            <li>Protects against scratches in the paing</li>
+            <li>Protects against damage to the paint</li>
+            <li>Self-healing</li>
+          </ul>
+
+          <h2 id="ceramic-coating" class="price-head">Sealant</h2>
+          <h3>Paint Correction - Ceramic Coating - Polishing</h3>
+          <table class="price">
+            <tr>
+              <th>Service</th>
+              <th>Sedan</th>
+              <th>SUV</th>
+            </tr>
+            <tr>
+              <td>Paint Correction <span class="price-asterisk">*</span></td>
+              <td>15 000,-</td>
+              <td>15 000,-</td>
+            </tr>
+            <tr>
+              <td>Wrap Sealant (ceramic)</td>
+              <td>4 000,-</td>
+              <td>4 000,-</td>
+            </tr>
+            <tr>
+              <td>Scratch Removal 70% (2 stage polish)</td>
+              <td>7 000,-</td>
+              <td>9 000,-</td>
+            </tr>
+            <tr>
+              <td>Scratch Removal 90% (3 stage polish)</td>
+              <td>10 000,-</td>
+              <td>11 000,-</td>
+            </tr>
+            <tr>
+              <td>
+                Ceramic Coating (24 months/25 000km)<span class="price-asterisk"
+                  >**</span
+                >
+              </td>
+              <td>9 000,-</td>
+              <td>10 000,-</td>
+            </tr>
+            <tr>
+              <td>
+                Ceramic Coating (36 months/40 000km)<span class="price-asterisk"
+                  >**</span
+                >
+              </td>
+              <td>10 000,-</td>
+              <td>11 000,-</td>
+            </tr>
+            <tr>
+              <td>
+                NEW CAR-SPA TREATMENT
+                <span class="price-asterisk"
+                  >***</span
+                >
+              </td>
+              <td>10 000,-</td>
+              <td>11 000,-</td>
+            </tr>
+            <tr>
+              <td>Rim Treatment</td>
+              <td>3 000,-</td>
+              <td>3 000,-</td>
+            </tr>
+            <tr>
+              <td>Glass Treatment (with polish)</td>
+              <td>4 000,-</td>
+              <td>4 000,-</td>
+            </tr>
+            <tr>
+              <td>Boat Treatment - Marine Coating</td>
+              <td>Upon Agreement</td>
+              <td>Upon Agreement</td>
+            </tr>
+            <tr>
+              <td>Window Polish (boat)</td>
+              <td>Upon Agreement</td>
+              <td>Upon Agreement</td>
+            </tr>
+            <tr>
+              <td>Polish and Renovation (Boat)</td>
+              <td>Upon Agreement</td>
+              <td>Upon Agreement</td>
+            </tr>
+            <tr>
+              <td>Wheel Loader Treatment</td>
+              <td>Upon Agreement</td>
+              <td>Upon Agreement</td>
+            </tr>
+            <tr>
+              <td>Truck Treatment/Decor</td>
+              <td>Upon Agreement</td>
+              <td>Upon Agreement</td>
+            </tr>
+            <tr>
+              <td>Motorsykkel Behandling</td>
+              <td>Upon Agreement</td>
+              <td>Upon Agreement</td>
+            </tr>
+            <tr>
+              <td>Snowmobile Treatment</td>
+              <td>Upon Agreement</td>
+              <td>Upon Agreement</td>
+            </tr>
+            <tr>
+              <td>Campervan Treatment</td>
+              <td>Upon Agreement</td>
+              <td>Upon Agreement</td>
+            </tr>
+          </table>
+          <p class="price-note">
+            <span class="price-asterisk">*</span> Spa Wash, 3 stage polish,
+            ceramic coating 36 months.
+          </p>
+          <p class="price-note">
+            <span class="price-asterisk">**</span> Includes Spa Wash, 2 stage polish.
+          </p>
+          <p class="price-note">
+            <span class="price-asterisk">***</span> includes SPA wash, 1-step high-gloss polishing, 
+            ceramic coating (36 months/40,000 km) in 3 hours.
+        </p>
+        
+
+          <h2 id="other" class="price-head">Other Services</h2>
+          <table class="price">
+            <tr>
+              <th>Service</th>
+              <th>Price</th>
+            </tr>
+            <tr>
+              <td>Pre-Sale Shine <span class="price-asterisk">*</span></td>
+              <td>6 000,-</td>
+            </tr>
+            <tr>
+              <td>
+                Pre-Sale Shine with Interior Wash and Clean<span
+                  class="price-asterisk"
+                  >**</span
+                >
+              </td>
+              <td>7 500,-</td>
+            </tr>
+            <tr>
+              <td>
+                Caliper Paint (long-term)
+                <img
+                  data-image="calipers"
+                  class="pricelist-image-button"
+                  src="static/images/image-icon.svg"
+                  alt=""
+                />
+              </td>
+              <td>5 000,-</td>
+            </tr>
+            <tr>
+              <td>Rust Removal/Repair of Small Imperfections</td>
+              <td>Upon Agreement</td>
+            </tr>
+          </table>
+          <p class="price-note">
+            <span class="price-asterisk">*</span> Spa Wash, 1 stage high gloss
+            polish, rim cleaning, wax.
+          </p>
+          <p class="price-note">
+            <span class="price-asterisk">**</span> Interior wash and clean up to
+            3 hours.
+          </p>
+
+          <h2 id="interior" class="price-head">Interior</h2>
+          <table class="price">
+            <tr>
+              <th>Service</th>
+              <th>Price</th>
+            </tr>
+            <tr>
+              <td>
+                Thorough Interior Cleaning <span class="price-asterisk">*</span>
+              </td>
+              <td>1 500,-</td>
+            </tr>
+            <tr>
+              <td>Depp Interior Cleaning</td>
+              <td>4 900,-</td>
+            </tr>
+            <tr>
+              <td>Wet vac (floor, seats, headliner)</td>
+              <td>3 000,-</td>
+            </tr>
+            <tr>
+              <td>Leather Cleaning and Impregnating</td>
+              <td>3 000,-</td>
+            </tr>
+            <tr>
+              <td>Leather Treatment (up to 12 months)</td>
+              <td>4 000,-</td>
+            </tr>
+            <tr>
+              <td>Leather Seat Repair</td>
+              <td>Etter Avtale</td>
+            </tr>
+            <tr>
+              <td>Imprgentation of Textile Seats (5 seats)</td>
+              <td>1 500,-</td>
+            </tr>
+            <tr>
+              <td>Wet Vac of Seats (5 seats)</td>
+              <td>1 500,-</td>
+            </tr>
+            <tr>
+              <td>Pack - Wet Vac + Impregnation of Textile Seats</td>
+              <td>2 500,-</td>
+            </tr>
+            <tr>
+              <td>Air Conditioning Clean (Remove Foul Odours)</td>
+              <td>2 500,-</td>
+            </tr>
+            <tr>
+              <td>Touchscreen Protection - PPF</td>
+              <td>1 000,-</td>
+            </tr>
+            <tr>
+              <td>Renovation of Leather Steering Wheel</td>
+              <td>2 000,-</td>
+            </tr>
+          </table>
+          <p class="price-note">
+            <span class="price-asterisk">*</span> Up to 3 hours.
+          </p>
+
+          <h2 id="windows" class="price-head">Solfilm</h2>
+          <table class="price">
+            <tr>
+              <th>Brand</th>
+              <th>B-Pillar</th>
+              <th>A-Pillar</th>
+            </tr>
+            <tr>
+              <td>Llumar ATC <span class="price-asterisk">*</span></td>
+              <td>5 500,-</td>
+              <td>6 500,-</td>
+            </tr>
+          </table>
+          <p class="price-note">
+            <span class="price-asterisk">*</span> Lifetime manufacturer
+            warranty.
+          </p>
+
+          <h2>Sun Film Facade</h2>
+          <p class="price">
+            Protect your home or office from heat gain on both glass doors and
+            windows. Various types of sun films available. Price upon agreement.
+          </p>
+        </section>
+      </div>
     </div>
 
     <footer class="index-contact">
-        <div class="container">
-            <h2>Get in <span class="bold">Touch</span></h2>
+      <div class="container">
+        <h2>Get in <span class="bold">Touch</span></h2>
 
-            <div class="flex flex-column index-contact-main">
-                <div class="index-contact-top flex">
-                    <img alt="" src="static/images/logo.svg" alt="">       
-                    <img alt="" src="static/images/klarna.png">
-                    <img alt="" src="static/images/arbeidstilsynet.png">
-                </div>
-            </div>
+        <div class="flex flex-column index-contact-main">
+          <div class="index-contact-top flex">
+            <img alt="" src="static/images/logo.svg" alt="" />
+            <img alt="" src="static/images/klarna.png" />
+            <img alt="" src="static/images/arbeidstilsynet.png" />
+          </div>
         </div>
+      </div>
 
-        <hr>
-        <div class="container flex map-contact-container">
-            <div class="map-container flex flex-column">
-                <h4>Mamrot CarSpa & Detailing</h4>
-                <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1981.1777450572122!2d11.079328277789882!3d60.22743533880989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464185571b3c5fa7%3A0xbfd53d262e855d15!2sMamrot%20CarSpa%20Detailing!5e0!3m2!1sen!2sno!4v1730112568007!5m2!1sen!2sno"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-              <div class="index-contact-socials flex">
-                <a href="https://www.facebook.com/profile.php?id=100086318628410"
-                  ><img src="static/images/facebook.svg" alt=""
-                /></a>
-                <a href="https://www.tiktok.com/@mamrot.carspa.detailing"
-                  ><img src="static/images/tiktok.svg" alt=""
-                /></a>
-                <a href="https://www.instagram.com/carspadetailing_oslo/"
-                  ><img src="static/images/instagram.svg" alt=""
-                /></a>
-              </div>
-            </div>
-            <div class="toolbox flex flex-column">
-              <a href="tel: 004793991633" class="tool flex">
-                <img src="static/images/phone.svg" alt="" />
-                <p>(+47) 939 91 633</p>
-              </a>
-  
-              <a
-                href="https://maps.app.goo.gl/Aee7TkPYN8NEE1GB9"
-                class="tool flex"
-              >
-              <img src="static/images/address.svg" alt="" />
-              <p>Majorveien 4, Nannestad</p>
-            </a>
-
-                <a href="mailto: mamrot.carspanord@gmail.com" class="tool flex">
-                    <img src="static/images/mail.svg" alt="">
-                    <p>mamrot.carspanord@gmail.com</p>
-                </a>
-
-            </div>
+      <hr />
+      <div class="container flex map-contact-container">
+        <div class="map-container flex flex-column">
+          <h4>Mamrot CarSpa & Detailing</h4>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1981.1777450572122!2d11.079328277789882!3d60.22743533880989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464185571b3c5fa7%3A0xbfd53d262e855d15!2sMamrot%20CarSpa%20Detailing!5e0!3m2!1sen!2sno!4v1730112568007!5m2!1sen!2sno"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <div class="index-contact-socials flex">
+            <a href="https://www.facebook.com/profile.php?id=100086318628410"
+              ><img src="static/images/facebook.svg" alt=""
+            /></a>
+            <a href="https://www.tiktok.com/@mamrot.carspa.detailing"
+              ><img src="static/images/tiktok.svg" alt=""
+            /></a>
+            <a href="https://www.instagram.com/carspadetailing_oslo/"
+              ><img src="static/images/instagram.svg" alt=""
+            /></a>
+          </div>
         </div>
-        <div class="makers-mark flex flex-column">
-            <p>2024</p>
-            <p><a rel="nofollow" href="https://arcticharedesign.no/en">Powered by Arctic Hare Designs</a></p>
+        <div class="toolbox flex flex-column">
+          <a href="tel: 004793991633" class="tool flex">
+            <img src="static/images/phone.svg" alt="" />
+            <p>(+47) 939 91 633</p>
+          </a>
+
+          <a href="https://maps.app.goo.gl/Aee7TkPYN8NEE1GB9" class="tool flex">
+            <img src="static/images/address.svg" alt="" />
+            <p>Majorveien 4, Nannestad</p>
+          </a>
+
+          <a href="mailto: mamrot.carspanord@gmail.com" class="tool flex">
+            <img src="static/images/mail.svg" alt="" />
+            <p>mamrot.carspanord@gmail.com</p>
+          </a>
         </div>
+      </div>
+      <div class="makers-mark flex flex-column">
+        <p>2024</p>
+        <p>
+          <a rel="nofollow" href="https://arcticharedesign.no/en"
+            >Powered by Arctic Hare Designs</a
+          >
+        </p>
+      </div>
     </footer>
-
-
-    </div>
-</body>
-
+  </body>
 </html>
