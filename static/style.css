@@ -670,8 +670,8 @@ nav a {
   left: 50%;
   transform: translate(-50%, -50%);
   object-fit: contain;
-  height: auto;
-  width: auto;
+  height: 100%;
+  width: 100%;
   max-width: 180%;
   max-height: 180%;
 }
