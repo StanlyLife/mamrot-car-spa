@@ -201,7 +201,7 @@ nav {
   background: var(--nav-bg);
   display: flex;
   justify-content: space-between;
-  padding: 2.7rem 10rem;
+  padding: 1.5rem 10rem;
   margin: 0;
   z-index: 100;
   position: sticky;
@@ -210,7 +210,7 @@ nav {
 }
 
 .nav-logo {
-  height: 7rem;
+  height: 10rem;
 }
 
 .flex {
@@ -226,7 +226,7 @@ nav {
   width: 70%;
   justify-content: space-between;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 
 a {
@@ -394,8 +394,9 @@ nav a {
 #under-hero-image {
   box-sizing: border-box;
   padding: 0 8rem;
-    width: 100%;
-  margin-bottom: 25rem;
+  margin: 0 10% 25rem 10%;
+  width: 100%;
+  max-width: 80%;
   
 }
 
