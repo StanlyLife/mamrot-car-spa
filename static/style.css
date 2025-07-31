@@ -28,6 +28,10 @@
   border-radius: 1rem;
 }
 
+.language-selector {
+  display: none !important;
+}
+
 body {
   font-family: var(--main-font);
   margin: 0;

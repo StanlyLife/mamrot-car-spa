@@ -48,12 +48,12 @@
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
-  <url>
+  <!-- <url>
     <loc>https://mamrotcarspa.no/index-en</loc>
     <lastmod>2024-03-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.4</priority>
-  </url>
+  </url> -->
   <url>
     <loc>https://mamrotcarspa.no/polishing</loc>
     <lastmod>2024-03-28</lastmod>
@@ -72,7 +72,7 @@
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
-  <url>
+  <!-- <url>
     <loc>https://mamrotcarspa.no/services-en</loc>
     <lastmod>2024-03-28</lastmod>
     <changefreq>daily</changefreq>
@@ -95,7 +95,7 @@
     <lastmod>2024-03-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.4</priority>
-  </url>
+  </url> -->
   <url>
     <loc>https://mamrotcarspa.no/gallery1</loc>
     <lastmod>2024-03-28</lastmod>
@@ -120,7 +120,7 @@
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
+  <!-- <url>
     <loc>https://mamrotcarspa.no/gallery2-en</loc>
     <lastmod>2024-03-28</lastmod>
     <changefreq>daily</changefreq>
@@ -143,5 +143,5 @@
     <lastmod>2024-03-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.4</priority>
-  </url>
+  </url> -->
 </urlset>
