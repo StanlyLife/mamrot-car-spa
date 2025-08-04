@@ -1,6 +1,8 @@
 function sendEmail() {
-    const url = 'https://script.google.com/macros/s/AKfycbzIhFof1kn4mqW-Rfs7tfBI4zCA3Ka45O0PUvF8FwWL7KPMrn6o2qVzE0QMzjl-FgNuVQ/exec'
-    const recipient = 'mamrot.carspanord@gmail.com'
+    // THIS MACRO NO LONGER POINTS TO MAMROT'S EMAIL
+    // const url = 'https://script.google.com/macros/deprecated'
+    // 
+    // Deprecated due to security issue const recipient = 'mamrot.carspanord@gmail.com'
 
     contactForm = document.querySelector('.contact-form');
 
