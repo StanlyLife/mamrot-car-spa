@@ -106,12 +106,47 @@
             <div class=" container contact-container flex">
                 <div class="contact-form-container flex flex-column">
                     <h2>Send en <span class="bold">Melding</span></h2>
-                    <form class=" contact-form flex flex-column" action="">
-                        <input type="email" name="email" id="email" placeholder="E-post" required>
-                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Melding"
-                            required></textarea>
-                        <button type="submit" class="button">Send</button>
-                    </form>
+<form id="contactForm" class="contact-form flex flex-column">
+  <input type="hidden" name="access_key" value="21d066e3-7bcc-4984-be4c-b5c4c5dd6f3f">
+  <input type="email" name="email" id="email" placeholder="E-post" required>
+  <textarea name="message" id="message" cols="30" rows="10" placeholder="Melding" required></textarea>
+  <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+  <button type="submit" class="button">Send</button>
+</form>
+<div id="formResult"></div>
+<script>
+const form = document.getElementById("contactForm")
+const result = document.getElementById("formResult")
+async function sendForm(data){
+  const res = await fetch("https://api.web3forms.com/submit", {
+    method:"POST",
+    headers:{ "Content-Type":"application/json","Accept":"application/json" },
+    body:JSON.stringify(Object.fromEntries(data))
+  })
+  return res.json().then(body=>({status:res.status,body}))
+}
+function showMessage(text){
+  result.textContent = text
+  setTimeout(()=>result.style.display="none",3000)
+}
+function resetForm(){
+  form.reset()
+}
+form.addEventListener("submit", async e=>{
+  e.preventDefault()
+  const data = new FormData(form)
+  result.style.display = "" 
+  result.textContent = "Vennligst vent..."
+  try{
+    const {status,body} = await sendForm(data)
+    status===200 ? showMessage("Melding sendt") : showMessage(body.message)
+  }catch{
+    showMessage("Noe gikk galt")
+  }finally{
+    resetForm()
+  }
+})
+</script>
 
                 </div>
                 <div class="contact-buttons flex flex-column">
