@@ -1,4 +1,3 @@
-
 function contentFade() {
   const maskContainer = document.querySelector(".mask-container");
   const overNavHeight = document.querySelector(".over-nav").scrollHeight;
@@ -23,59 +22,59 @@ function toPlainPx(element, style) {
 }
 
 function mobileNavOpen() {
-  body = document.querySelector('body');
-  navLinks = document.querySelector('.nav-links');
-  overNav = document.querySelector('.over-nav');
-  hamburgerIcon = document.querySelector('#hamburger-icon');
+  body = document.querySelector("body");
+  navLinks = document.querySelector(".nav-links");
+  overNav = document.querySelector(".over-nav");
+  hamburgerIcon = document.querySelector("#hamburger-icon");
 
-  hamburgerIcon.addEventListener('click', function () {
-
+  hamburgerIcon.addEventListener("click", function () {
     setTimeout(() => {
       navToggle();
     }, 1);
-
   });
 
-const navListener = new AbortController();
+  const navListener = new AbortController();
   function navToggle() {
-    navLinks.querySelectorAll('a').forEach((child) => {
-      child.classList.toggle('transition');
-    })
-    if (navLinks.classList.contains('active')) {
-
+    navLinks.querySelectorAll("a").forEach((child) => {
+      child.classList.toggle("transition");
+    });
+    if (navLinks.classList.contains("active")) {
       navListener.abort();
-    } else {  
-      window.addEventListener('click', windowListener, {signal: navListener.signal}); 
+    } else {
+      window.addEventListener("click", windowListener, {
+        signal: navListener.signal,
+      });
     }
 
-
     function windowListener(e) {
-      if (navLinks.classList.contains('active') && (!e.target.closest('.over-nav') && !e.target.closest('nav'))) {
+      if (
+        navLinks.classList.contains("active") &&
+        !e.target.closest(".over-nav") &&
+        !e.target.closest("nav")
+      ) {
         navToggle();
       }
     }
 
-
-
-    navLinks.classList.toggle('active');
-    overNav.classList.toggle('active');
-    hamburgerIcon.classList.toggle('active');
-    hamburgerIcon.querySelectorAll('div').forEach((element) => element.classList.remove('animation-off'));
-
+    navLinks.classList.toggle("active");
+    overNav.classList.toggle("active");
+    hamburgerIcon.classList.toggle("active");
+    hamburgerIcon
+      .querySelectorAll("div")
+      .forEach((element) => element.classList.remove("animation-off"));
   }
 }
 function mobileNavTransition() {
-  navLinks = document.querySelector('.nav-links');
-  overNav = document.querySelector('.over-nav');
+  navLinks = document.querySelector(".nav-links");
+  overNav = document.querySelector(".over-nav");
   if (window.innerWidth < 769) {
     setTimeout(() => {
-      navLinks.classList.add('nav-transition');
-      overNav.classList.add('nav-transition');
+      navLinks.classList.add("nav-transition");
+      overNav.classList.add("nav-transition");
     }, 1);
-
   } else {
-    navLinks.classList.remove('nav-transition');
-    overNav.classList.remove('nav-transition');
+    navLinks.classList.remove("nav-transition");
+    overNav.classList.remove("nav-transition");
   }
 }
 
@@ -83,13 +82,22 @@ document.addEventListener("DOMContentLoaded", () => {
   contentFade();
   mobileNavOpen();
   mobileNavTransition();
+  // Auto-fill current year in footer makers-mark blocks
+  try {
+    const year = new Date().getFullYear();
+    document.querySelectorAll(".current-year").forEach((el) => {
+      el.textContent = year;
+    });
+  } catch (_) {
+    // no-op
+  }
 });
 
 window.onscroll = function () {
   contentFade();
 };
 
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
   mobileNavTransition();
   contentFade();
 });
