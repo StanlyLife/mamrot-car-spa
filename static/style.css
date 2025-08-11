@@ -155,9 +155,8 @@ ul {
   padding: 1rem 5rem;
 }
 
-.modal-content ol h4, 
-.modal-content ol p
-{
+.modal-content ol h4,
+.modal-content ol p {
   padding-left: unset;
 }
 .img-contain .img-contain {
@@ -317,9 +316,9 @@ nav a {
   margin: 25rem 0;
 }
 
-.hero-sm-container ul{
- max-width: 70%;
- width: 70%;
+.hero-sm-container ul {
+  max-width: 70%;
+  width: 70%;
 }
 
 .hero-text-sm {
@@ -395,13 +394,42 @@ nav a {
   z-index: -2;
 }
 
+/* Under-hero collage */
+.under-hero-collage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1.6rem;
+  width: 100%;
+  max-width: 100rem;
+  margin: 4rem auto 20rem auto;
+  padding: 0 2rem;
+}
+
+.under-hero-tile {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Tighter spacing on small screens */
+@media (max-width: 768px) {
+  .under-hero-collage {
+    gap: 1rem;
+    margin: 2rem auto 10rem auto;
+    padding: 0 1rem;
+  }
+}
+
+/* Legacy single under-hero image styling (used on some pages) */
 #under-hero-image {
   box-sizing: border-box;
   padding: 0 8rem;
   margin: 0 10% 25rem 10%;
   width: 100%;
   max-width: 80%;
-  
 }
 
 .card-3d {
@@ -953,8 +981,7 @@ nav a {
   transform: translateX(-100%);
 }
 
-.gallery-image {
-}
+/* removed empty .gallery-image ruleset */
 
 .gallery-page-selector {
   width: 100%;
@@ -1192,7 +1219,8 @@ nav a {
 }
 
 #contact-hero {
-    height: unset;  }
+  height: unset;
+}
 
 @media only screen and (max-width: 1200px) {
   .over-nav {
@@ -1266,8 +1294,7 @@ nav a {
     font-size: 2.5rem;
   }
 
-  .toolbox div {
-  }
+  /* removed empty .toolbox div ruleset */
 
   .image-grid {
     grid-gap: 3rem;
@@ -1325,7 +1352,6 @@ nav a {
   .contact-container {
     padding: 4rem;
   }
-
 }
 
 @media only screen and (max-width: 768px) {
@@ -1427,9 +1453,9 @@ nav a {
     transform: translateX(0) scale(1, 1);
     transition: 0.3;
   }
-#under-hero-image {
-  padding: 0;
-}
+  #under-hero-image {
+    padding: 0;
+  }
 
   #hamburger-icon {
     display: unset;
