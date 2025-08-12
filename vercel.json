@@ -1,10 +1,3 @@
 {
-  "cleanUrls": true,
-  "redirects": [
-    {
-      "source": "/:path*",
-      "destination": "https://www.mamrotcarspa.no/:path*",
-      "permanent": true
-    }
-  ]
+  "cleanUrls": true
 }
